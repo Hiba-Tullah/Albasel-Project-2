@@ -198,13 +198,7 @@
                         <div class="main-menu h-100">
                             <nav class="navbar h-100 navbar-expand-lg">
                                 <!-- Logo Area  -->
-                                <a class="navbar-brand" href="/index"><img src="img/core-img/logo.png"
-
-
-
-
-
-                                    alt="Logo" ></a>
+                                <a class="navbar-brand" href="/index"><img src="img/core-img/logo.png"  height="83px" width="80px" alt="Logo" ></a>
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
@@ -274,7 +268,7 @@
                                         @if(!Auth::check())
 
                                          <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus">About</a>
+                                            <a class="nav-link" href="/aboutUs">About</a>
                                         </li>
 
                                         <li class="nav-item">

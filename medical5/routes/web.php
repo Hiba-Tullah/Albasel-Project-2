@@ -239,6 +239,20 @@ Route::get('/orderMnS', function () {
 });
 
 
-Route::get('/roomD', function () {
-    return view('roomD');
+Route::get('/roomD', 'BedsController@getAll');
+
+Route::get('/smoking', function () {
+    return view('smoking');
 });
+
+
+Route::get('/corona', function () {
+    return view('corona');
+});  
+
+
+Route::get('/ventilation', function () {
+    return view('ventilation');
+}); 
+Route::post('/changestatus','BedsController@changeStatus');
+Route::post('/makeappoinment','AppoinmentController@make');

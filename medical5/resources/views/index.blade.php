@@ -54,6 +54,33 @@
 .single_blog_img .social_icon { position: absolute; bottom:0; left:0; }
 
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
 <!-- *****Hero of the week Style Area End ***** -->
 
@@ -71,7 +98,7 @@
                                 <h2 data-animation="fadeInUp" data-delay="500ms"> &nbsp;&nbsp;  <br><br><br>  &nbsp;&nbsp;Experienced Doctors That <br> 
                                 &nbsp;&nbsp;&nbsp;You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="600ms">  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;We Are Here For Your Care </h6>
-<a  href="/ourDoctors" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms"> Our Doctors<span>+</span></a>
+<a  href="#doctor_part" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms"> Our Doctors<span>+</span></a>
                                 
                             </div>
                         </div>
@@ -88,7 +115,7 @@
                                 <h2 data-animation="fadeInUp" data-delay="500ms"> &nbsp;&nbsp;  <br><br>  &nbsp;&nbsp;Medical Services  <br>
                                 &nbsp;&nbsp;All Day Long 24/7</h2>
                                <h6 data-animation="fadeInUp" data-delay="600ms"></h6>
-                                <a  href="/services" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Our Services <span>+</span></a>
+                                <a  href="#part2" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Our Services <span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -119,8 +146,8 @@
                                
                                 
                                   <h6 data-animation="fadeInUp" data-delay="600ms">  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                        &nbsp;&nbsp;           xxxxx</h6>
-                                <a  href="/medicalBlog" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Medical Blog <span>+</span></a>
+                        &nbsp;&nbsp;          </h6>
+                                <a  href="#part3" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Medical Blog <span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -153,6 +180,51 @@
                     </div>
                 </div>
             </div>
+               <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(img/bg-img/breadcumb4.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(img/bg-img/breadcumb5.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(img/bg-img/breadcumb6.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(img/bg-img/breadcumb7.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(img/bg-img/breadcumb8.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- ***** Hero Area End ***** -->
@@ -176,7 +248,8 @@
 
                             <div class="col-12 col-lg-9">
                                 <div class="medilife-appointment-form">
-                                    <form action="#" method="post">
+                                    <form onsubmit="return false;" id="appform" >
+                                        @csrf
                                         <div class="row align-items-end">
                                            
                                             <div class="col-12 col-md-4">
@@ -186,7 +259,8 @@
                                                 <div class="form-group">
                                                 </br>
                                                     <h6 style="color: white">Choose Service</h6>
-                                                    <select class="form-control" id="speciality" name="service">
+                                                    <select class="form-control" id="speciality" required name="service">
+                                                   <option>Service</option>
                                                     <option>holter</option>
                                                     <option>sergury</option>
                                                     <option>Qathter</option>
@@ -199,7 +273,8 @@
                                                 <div class="form-group">
                                                     </br>
                                                     <h6 style="color: white">Choose Doctor</h6>
-                                                    <select class="form-control" id="doctors">
+                                                    <select class="form-control" required  id="doctors" name="doctor">
+                                                    <option>doctor</option>
                                                     <option>Ayham Shaabo</option>
                                                     <option>Ghayath Baddour</option>
                                                     <option>Younes Khello</option>
@@ -211,39 +286,39 @@
                                             <div class="col-12 col-md-2">
                                                 <div class="form-group">
                                                  
-                                                    <input type="date" class="form-control" name="date" id="date" placeholder="Date">
+                                                    <input type="date" required  class="form-control" name="date" id="date" placeholder="Date">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-2">
                                                 <div class="form-group">
                                                  
-                                                    <input type="time" class="form-control" name="time" id="time" placeholder="Time">
+                                                    <input type="time" required  class="form-control" name="time" id="time" placeholder="Time">
 
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" placeholder="Name">
+                                                    <input type="text" required  class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" placeholder="Name">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="number" id="number" placeholder="Phone">
+                                                    <input type="text" required  class="form-control border-top-0 border-right-0 border-left-0" name="number" id="number" placeholder="Phone">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="idNumber" id="idNumber" placeholder="ID Number">
+                                                    <input type="text" required  class="form-control border-top-0 border-right-0 border-left-0" name="idNumber" id="idNumber" placeholder="ID Number">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-7">
                                                 <div class="form-group mb-0">
-                                                    <textarea name="message" class="form-control mb-0 border-top-0 border-right-0 border-left-0" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                                    <textarea name="message" required  class="form-control mb-0 border-top-0 border-right-0 border-left-0" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-5 mb-0">
                                                 <div class="form-group mb-0">
-                                                    <button type="submit" class="btn medilife-btn" >Make an Appointment <span>+</span></button>
+                                                    <button  id="makeapp" class="btn medilife-btn" >Make an Appointment <span>+</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,7 +363,7 @@
         </br> </br> </br>
                 <h4 class="glow">Heroes Of This Week  </h4>
                
-                <p>Congratulations, dear doctors, on getting the board certificate,Good Luck</p>
+                <p>Congratulations</p>
                 </div> </br>
         <div class="container">
             <div class="row">
@@ -373,24 +448,15 @@
     <div class="section_tittle text-center">
         </br> </br>
 <h2> Hospital Sections</h2>
-<p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
-</div> </br>
+</br>
+
+</div> 
     <div class="medilife-gallery-area owl-carousel">
      
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+        
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g2.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g2.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+       
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
             <img src="img/bg-img/g3.jpg" alt="">
@@ -400,24 +466,14 @@
         </div>
 
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g4.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g4.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+       
         <div class="single-gallery-item">
            <img src="img/bg-img/g5.jpg" alt="">
             <div class="view-more-btn">
                 <a href="img/bg-img/g5.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-         <div class="single-gallery-item">
-            <img src="img/bg-img/g6.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g6.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div> 
+         
         
         <div class="single-gallery-item">
             <img src="img/bg-img/g7.jpg" alt="">
@@ -443,13 +499,52 @@
                 <a href="img/bg-img/g10.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g11.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g11.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g12.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g12.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g13.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g13.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+     
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g15.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g15.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g16.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g16.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+       
+       
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g20.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g20.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
     </div>
   <!-- ***** Hospital Sections Area end**** -->
 
 
 
     <!-- ***** About Us Area Start ***** -->
-    <section class="medica-about-us-area section-padding-100-20">
+    <section class="medica-about-us-area section-padding-100-20" id="part2">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
@@ -469,7 +564,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>The Best Doctors</h5>
-                                    <p>The Best Doctors.</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -481,7 +576,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>Nursery</h5>
-                                    <p>Nursery.</p>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -493,7 +588,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>Laboratory</h5>
-                                    <p>Laboratory.</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -505,7 +600,7 @@
                                 </div>
                                 <div class="service-content">
                                     <h5>Emergency Room</h5>
-                                    <p>Emergency Room</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -521,71 +616,54 @@
     <!-- ***** Gallery2Area Start ***** -->
     <div class="medilife-gallery-area owl-carousel">
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+     
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g2.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g2.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+       
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g3.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g3.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+        
 
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
-            <img src="img/bg-img/g4.jpg" alt="">
+            <img src="img/bg-img/gg2.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g4.jpg" class="btn gallery-img">See More +</a>
+                <a href="img/bg-img/gg2.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
         <div class="single-gallery-item">
-           <img src="img/bg-img/g5.jpg" alt="">
+            <img src="img/bg-img/gg4.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g5.jpg" class="btn gallery-img">See More +</a>
+                <a href="img/bg-img/gg4.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
+       
          <div class="single-gallery-item">
-            <img src="img/bg-img/g6.jpg" alt="">
+            <img src="img/bg-img/gg5.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g6.jpg" class="btn gallery-img">See More +</a>
+                <a href="img/bg-img/gg5.jpg" class="btn gallery-img">See More +</a>
             </div>
-        </div> 
+        </div><div class="single-gallery-item">
+            <img src="img/bg-img/gg6.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/gg6.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
         
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g7.jpg" alt="">
+       
+        
+         <div class="single-gallery-item">
+            <img src="img/bg-img/gg10.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g7.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g8.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g8.jpg" class="btn gallery-img">See More +</a>
+                <a href="img/bg-img/gg10.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g9.jpg" alt="">
+            <img src="img/bg-img/gg11.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g9.jpg" class="btn gallery-img">See More +</a>
+                <a href="img/bg-img/gg11.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-         <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+        
+
     </div>
     <section class="medilife-cool-facts-area section-padding-100-0">
         <div class="container">
@@ -596,7 +674,7 @@
                         <i class="icon-blood-transfusion-2"></i>
                         <h2><span class="counter">32</span></h2>
                         <h6>Blood donations</h6>
-                        <p>Blood donations Blood donations .</p>
+                        
                     </div>
                 </div>
                 <!-- Single Cool Fact-->
@@ -605,7 +683,7 @@
                         <i class="icon-atoms"></i>
                         <h2><span class="counter">5632</span>k</h2>
                         <h6>Pacients</h6>
-                        <p>Pacients Pacients Pacients.</p>
+                      
                     </div>
                 </div>
                 <!-- Single Cool Fact-->
@@ -614,7 +692,7 @@
                         <i class="icon-microscope"></i>
                         <h2><span class="counter">5</span></h2>
                         <h6>Specialities</h6>
-                        <p>Specialities Specialities Specialities.</p>
+                     
                     </div>
                 </div>
                 <!-- Single Cool Fact-->
@@ -623,7 +701,7 @@
                         <i class="icon-doctor-1"></i>
                         <h2><span class="counter">47</span></h2>
                         <h6>Doctors</h6>
-                        <p>Doctors Doctors doctors</p>
+                     
                     </div>
                 </div>
             </div>
@@ -634,13 +712,14 @@
       <!-- ***** Experienced Doctors Area Start ***** -->
   </br>
 
-  <section class="doctor_part section_padding">
+<section class="doctor_part section_padding" id="doctor_part">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-xl-8">
 <div class="section_tittle text-center">
 <h2> Experienced Doctors</h2>
-<p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
+</br>
+
 </div>
 </div>
 </div>
@@ -648,12 +727,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/1.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-heart"></i> </a></li>
-<li><a href="#"> <i class="ti-facebook" ></i> </a></li>
-<li><a href="#"> <i class=" ti-email"></i> </a></li>
+<li><a href="3" data-toggle="modal" data-target="#exampleModalCenter"><i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/ayham.chaabo"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -662,6 +741,31 @@
 <div class="single_blog_text">
 <h3>DR Ayham Shaabu</h3>
 <p>Heart specialist</p>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">DR Ayham Shaabu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>DR Ayham Shaabu</h3>
+<p>Heart specialist</p>
+        <img src="img/doctor/doctor2/1.jpg" alt="doctor">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Contact</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 </div>
@@ -669,12 +773,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/2.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -690,12 +794,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/3.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100001922906727"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -711,12 +815,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/4.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -735,12 +839,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/5.png" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/jamsaker"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -758,19 +862,19 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/16.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/mazen.alrustom"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
-<h3>DR Anitta Abbass</h3>
+<h3>DR Mazen ALrustom</h3>
 <p>Heart specialist</p>
 </div>
 </div>
@@ -779,12 +883,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/7.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/manal.saleh.56481"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -800,12 +904,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/8.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/randasalom"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -823,12 +927,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/9.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -845,12 +949,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/10.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -867,12 +971,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/11.png" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/youssef.aboutabikh"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -890,12 +994,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/12.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/ahmad.dayoub"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -911,19 +1015,19 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/13.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/yamen.khaddor"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
-<h3>DR Ayman Mechaeel</h3>
+<h3>DR Yamen Khadour</h3>
 <p>Heart specialist</p>
 </div>
 </div>
@@ -932,12 +1036,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/14.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/yousof.ghanem"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -953,12 +1057,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/15.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -974,19 +1078,103 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/doctor2/6.png" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/anita.abbas.395"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
-<h3>DR Mazen Rostom</h3>
+<h3>DR Anita Abbas</h3>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/doctor2/17.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/souad.rajab.1"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h3>DR Souad Rajab</h3>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/doctor2/18.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100017281214703"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h3>DR Eiad Hammad</h3>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/doctor2/19.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="#"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h3>DR Mohammad Kadro</h3>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/doctor2/20.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="#"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h3>DR Qousay Mahfoud</h3>
 <p>Heart specialist</p>
 </div>
 </div>
@@ -1015,7 +1203,8 @@
 <div class="col-xl-8">
 <div class="section_tittle text-center">
 <h2> Resident Doctors</h2>
-<p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
+</br>
+
 </div>
 </div>
 </div>
@@ -1023,13 +1212,13 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor" >
+<img src="img/doctor/1.jpg" alt="doctor" >
 
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-heart"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
 <li><a href="#"> <i class="ti-email" ></i> </a></li>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
+<li><a href="https://www.facebook.com/sally.almohammad"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1046,19 +1235,19 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/2.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/adnan.mustafa.334"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
-<h4>DR </h4>
+<h4>Dr Adnan Mustafa</h4>
 <p>Heart specialist</p>
 </div>
 </div>
@@ -1067,12 +1256,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/3.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/Karam.Baddour"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1088,12 +1277,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/4.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/taym.hishma"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1109,12 +1298,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor4.jpg" alt="doctor">
+<img src="img/doctor/5.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/ima1989dhh"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1133,12 +1322,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/6.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/hossam.teftafeh"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1156,12 +1345,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/7.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/alaa.kajo"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1177,12 +1366,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor7.png" alt="doctor">
+<img src="img/doctor/8.png" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/Noro304"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1198,12 +1387,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/9.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100008882281727"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1221,12 +1410,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/18.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/housam.japour.5"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1243,12 +1432,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/11.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/eyad.maalla.1"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1265,12 +1454,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/12.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/abud.mohammed.1"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1288,19 +1477,19 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/13.png" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
-<h4>DR Hozan ?</h4>
+<h4>DR Hozan H</h4>
 <p>Heart specialist</p>
 </div>
 </div>
@@ -1309,12 +1498,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/14.png" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1330,12 +1519,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/15.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1351,12 +1540,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor15.png" alt="doctor">
+<img src="img/doctor/16.png" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1372,34 +1561,12 @@
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor16.jpg" alt="doctor">
+<img src="img/doctor/17.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
-<li><a href="#"> <i class="ti-skype"></i> </a></li>
-</ul>
-</div>
-</div>
-<div class="single_text">
-<div class="single_blog_text">
-<h4>DR Saadoun Saadoun</h4>
-<p>Heart specialist</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="col-sm-6 col-lg-3">
-<div class="single_blog_item">
-<div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
-<div class="social_icon">
-<ul>
-<li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1413,16 +1580,61 @@
 </div>
 </div>
 
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/20.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="#"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h4>DR Kinan Souliman</h4>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+
 
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/19.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h4>DR Akram sh</h4>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/25.png" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/sadoun.sh.sa"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
@@ -1435,24 +1647,85 @@
 </div>
 </div>
 </div>
-
-
 <div class="col-sm-6 col-lg-3">
 <div class="single_blog_item">
 <div class="single_blog_img">
-<img src="img/doctor/doctor3.jpg" alt="doctor">
+<img src="img/doctor/21.jpg" alt="doctor">
 <div class="social_icon">
 <ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
 <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-<li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-<li><a href="#"> <i class="ti-instagram"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
 </div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
-<h4>DR Saadoun Saadoun</h4>
+<h4>DR Ossama hussen</h4>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/22.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100011268165725"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div> 
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h4>DR Ahmad Hassan</h4>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/23.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="#"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h4>DR Bassel Mohammad</h4>
+<p>Heart specialist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-3">
+<div class="single_blog_item">
+<div class="single_blog_img">
+<img src="img/doctor/24.jpg" alt="doctor">
+<div class="social_icon">
+<ul>
+<li><a href="#"> <i class="ti-user"></i> </a></li>
+<li><a href="#"> <i class="ti-email" ></i> </a></li>
+<li><a href="#"> <i class="ti-facebook"></i> </a></li>
+<li><a href="#"> <i class="ti-skype"></i> </a></li>
+</ul>
+</div>
+</div>
+<div class="single_text">
+<div class="single_blog_text">
+<h4>DR Hamzah Masoud</h4>
 <p>Heart specialist</p>
 </div>
 </div>
@@ -1480,7 +1753,8 @@
      <!-- ***** The unknown soldiers Start ***** -->
        <div class="section_tittle text-center">
 <h2> The Unknown Soldiers Team </h2>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+</br>
+
 </div>
     
 
@@ -1491,172 +1765,123 @@
 
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
+            <img src="img/bg-img/ggg1.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">The Engineers +</a>
+                <a href="img/bg-img/ggg1.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
+            <img src="img/bg-img/ggg2.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">The Engineers +</a>
+                <a href="img/bg-img/ggg2.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
+            <img src="img/bg-img/ggg3.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">The Engineers +</a>
+                <a href="img/bg-img/ggg3.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
+            <img src="img/bg-img/ggg4.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">The Engineers +</a>
+                <a href="img/bg-img/ggg4.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
         <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
+            <img src="img/bg-img/ggg5.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">The Maintenance technicians +</a>
+                <a href="img/bg-img/ggg5.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
         <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
+            <img src="img/bg-img/ggg13.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">The Maintenance technicians +</a>
-            </div>
-        </div>
-        <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g2.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g2.jpg" class="btn gallery-img">The Administrators +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g2.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g2.jpg" class="btn gallery-img">The Administrators +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g2.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g2.jpg" class="btn gallery-img">The Administrators +</a>
-            </div>
-        </div>
-        <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g3.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g3.jpg" class="btn gallery-img">The HR +</a>
-            </div>
-        </div>
-
-        <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g4.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g4.jpg" class="btn gallery-img">The Statistics +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-           <img src="img/bg-img/g5.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g5.jpg" class="btn gallery-img">The Pharmacists +</a>
+                <a href="img/bg-img/ggg13.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g6.jpg" alt="">
+            <img src="img/bg-img/ggg14.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g6.jpg" class="btn gallery-img">The Medical analysis laboratory +</a>
+                <a href="img/bg-img/ggg14.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div> 
          <div class="single-gallery-item">
-            <img src="img/bg-img/g6.jpg" alt="">
+            <img src="img/bg-img/ggg15.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g6.jpg" class="btn gallery-img">The Medical analysis laboratory +</a>
-            </div>
-        </div> 
-         <div class="single-gallery-item">
-            <img src="img/bg-img/g6.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g6.jpg" class="btn gallery-img">The Medical analysis laboratory +</a>
+                <a href="img/bg-img/ggg15.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div> 
         
+        
+        
         <div class="single-gallery-item">
-            <img src="img/bg-img/g7.jpg" alt="">
+            <img src="img/bg-img/ggg16.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g7.jpg" class="btn gallery-img">The Nursing +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g8.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g8.jpg" class="btn gallery-img">The Nursing +</a>
+                <a href="img/bg-img/ggg16.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g8.jpg" alt="">
+            <img src="img/bg-img/ggg17.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g8.jpg" class="btn gallery-img">The Nursing +</a>
+                <a href="img/bg-img/ggg17.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+       
+         <div class="single-gallery-item">
+            <img src="img/bg-img/ggg20.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/ggg20.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/ggg21.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/ggg21.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/ggg22.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/ggg22.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/ggg23.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/ggg23.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
          <div class="single-gallery-item">
-            <img src="img/bg-img/g9.jpg" alt="">
+            <img src="img/bg-img/ggg24.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g9.jpg" class="btn gallery-img">The Accountants +</a>
-            </div>
-        </div>
-         <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The Accountants +</a>
+                <a href="img/bg-img/ggg24.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
         <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
+            <img src="img/bg-img/ggg25.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The Accountants +</a>
+                <a href="img/bg-img/ggg25.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
+       
         <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
+            <img src="img/bg-img/ggg29.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The Reception +</a>
+                <a href="img/bg-img/ggg29.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
+       
+        
+         
+           <div class="single-gallery-item">
+            <img src="img/bg-img/ggg35.jpg" alt="">
             <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The health insurance +</a>
+                <a href="img/bg-img/ggg35.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-         <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The Central warehouse +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The guards +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The drivers +</a>
-            </div>
-        </div>
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g10.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g10.jpg" class="btn gallery-img">The white hands Team +</a>
-            </div>
-        </div>
+           
+           
     </div>
 
 
@@ -1670,11 +1895,12 @@
 
 
     <!-- ***** Blog Area/ Medical Articles Start ***** -->
-    <div class="medilife-blog-area section-padding-100-0">
+    <div class="medilife-blog-area section-padding-100-0" id="part3">
         <div class="container">
             <div class="section_tittle text-center">
 <h2> Latest Medical Articles </h2>
-<p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
+</br>
+
 </div>
             <div class="row">
 
@@ -1684,10 +1910,10 @@
                     <div class="single-blog-area mb-100">
                         <!-- Post Thumbnail -->
                         <div class="blog-post-thumbnail">
-                        <a  href="#" >     <img   src="img/blog-img/1.jpg" alt=""></a>
+                        <a  href="/ventilation" >     <img   src="img/blog-img/1.jpg" alt=""></a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a>Jan 23, 2018</a>
+                                <a>May 23, 2020</a>
                             </div>
                         </div>
 
@@ -1695,11 +1921,11 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <div class="post-author">
-                                <a  href="#" ><img src="img/blog-img/p1.jpg" alt=""></a>
+                                <a  href="/ventilation" ><img src="img/blog-img/p1.jpg" alt=""></a>
                             </div>
-                            <a href="#" class="headline">New drog release soon</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            <a href="#"  class="comments">3 Comments</a>
+                            <a href="/ventilation" class="headline">Automatic_ventilation device</a>
+                            <p>There has been a lot of talk about it along with the increase in the spread of corona virus, it is the thread that connects the injured in the critical cases of pulmonary failure to life, # ventilation_a Mechanism What do we know about it !!?</p>
+                            <a href="/ventilation"  class="comments">10 Comments</a>
                         </div>
                     </div>
                 </div>
@@ -1712,10 +1938,10 @@
                     <div class="single-blog-area mb-100">
                         <!-- Post Thumbnail -->
                         <div class="blog-post-thumbnail">
-                           <a  href="#" >  <img  href="#" src="img/blog-img/2.jpg" alt=""></a>
+                           <a  href="/corona" >  <img  href="#" src="img/blog-img/2.jpg" alt=""></a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a >Jan 23, 2018</a>
+                                <a >Jun 3, 2020</a>
                             </div>
                         </div>
 
@@ -1725,10 +1951,10 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <div class="post-author">
-                                <a href="#"><img src="img/blog-img/p2.jpg" alt=""></a>
+                                <a href="/corona"><img src="img/blog-img/p1.jpg" alt=""></a>
                             </div>
-                            <a href="#" class="headline">Free dental care</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <a href="/corona" class="headline">Pung_corn_mask_krona</a>
+                            <p>pneumonia is an inflammation of the lung vesicles that causes them to be filled with pus and fluid..</p>
                             <a href="#" class="comments">3 Comments</a>
                         </div>
                     </div>
@@ -1741,10 +1967,10 @@
                     <div class="single-blog-area mb-100">
                         <!-- Post Thumbnail -->
                         <div class="blog-post-thumbnail">
-                         <a  href="#" >    <img src="img/blog-img/3.jpg" alt=""></a>
+                         <a  href="/smoking" >    <img src="img/blog-img/3.jpg" alt=""></a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a >Jan 23, 2018</a>
+                                <a >Jun 15, 2020</a>
                             </div>
                         </div>
 
@@ -1754,11 +1980,11 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <div class="post-author">
-                                <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
+                                <a href="/smoking"><img src="img/blog-img/p1.jpg" alt=""></a>
                             </div>
-                            <a href="#" class="headline">Good news for the pacients</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            <a href="#" class="comments">3 Comments</a>
+                            <a href="/smoking" class="headline">Smoking and heart health</a>
+                            <p>Smoking causes structural changes in the heart and the blood it pumps into the body and weakens their ability to function normally.. </p>
+                            <a href="/smoking" class="comments">5 Comments</a>
                         </div>
            
                     </div>
@@ -1792,7 +2018,8 @@
             <div class="section_tittle text-center">
                 
 <h2> Latest Hospital News </h2>
-<p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
+</br>
+
 </div>
             <div class="row">
 
@@ -1802,22 +2029,26 @@
                     <div class="single-blog-area mb-100">
                         <!-- Post Thumbnail -->
                         <div class="blog-post-thumbnail">
-                            <a href="#"> <img src="img/blog-img/1.jpg" alt=""></a>
+                            <a > <img src="img/blog-img/1g.jpg" alt="">
+                           <div class="view-more-btn">
+                <a href="img/blog-img/1g.jpg" class="btn gallery-img">See More +</a>
+            </div>
+
+
+                            </a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a >Jan 23, 2018</a>
+                                <a >May 23, 2020</a>
                             </div>
                         </div>
 
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            <div class="post-author">
-                                <a href="#"><img src="img/blog-img/p1.jpg" alt=""></a>
-                            </div>
-                            <a href="#" class="headline">New drog release soon</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            <a href="#" class="comments">3 Comments</a>
+                           
+                            <a  class="headline">Request for internal offers</a>
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -1830,10 +2061,23 @@
                     <div class="single-blog-area mb-100">
                         <!-- Post Thumbnail -->
                         <div class="blog-post-thumbnail">
-                            <a href="#"> <img src="img/blog-img/2.jpg" alt=""></a>
+                            <a > <img src="img/blog-img/2g.jpg" alt="">
+
+
+           <div class="view-more-btn">
+                <a href="img/blog-img/2g.jpg" class="btn gallery-img">See More +</a>
+            </div>
+
+
+
+
+
+
+
+                            </a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a >Jan 23, 2018</a>
+                                <a >Jan 15, 2020</a>
                             </div>
                         </div>
 
@@ -1842,12 +2086,10 @@
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            <div class="post-author">
-                                <a href="#"><img src="img/blog-img/p2.jpg" alt=""></a>
-                            </div>
-                            <a href="#" class="headline">Free dental care</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            <a href="#" class="comments">3 Comments</a>
+                            
+                            <a  class="headline">Request for internal offers</a>
+                          
+                            
                         </div>
                     </div>
                 </div>
@@ -1859,10 +2101,18 @@
                     <div class="single-blog-area mb-100">
                         <!-- Post Thumbnail -->
                         <div class="blog-post-thumbnail">
-                         <a href="#">    <img src="img/blog-img/3.jpg" alt=""></a>
+                         <a >    <img src="img/blog-img/3g.jpg" alt="">
+
+
+                              <div class="view-more-btn">
+                <a href="img/blog-img/3g.jpg" class="btn gallery-img">See More +</a>
+            </div>
+
+
+                         </a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a >Jan 23, 2018</a>
+                                <a >Jun 20, 2020</a>
                             </div>
                         </div>
 
@@ -1871,12 +2121,10 @@
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            <div class="post-author">
-                                <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
-                            </div>
-                            <a href="#" class="headline">Good news for the pacients</a>
-                            <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                            <a href="#" class="comments">3 Comments</a>
+                            
+                            <a  class="headline">Cardio exercises are good for heart health</a>
+                           
+                           
                         </div>
             
                     </div>
@@ -1885,7 +2133,7 @@
                 </div>
                  <div class="medica-about-content">
                                           
-                   <a href="/medicalBlog" class="btn medilife-btn mt-50" >View More... <span>+</span></a>
+                   <a href="/hospitalNews" class="btn medilife-btn mt-50" >View More... <span>+</span></a>
                </div>
                
             </div>
@@ -1942,6 +2190,12 @@
 </br>
     
  <!-- ***** statistics bar End***** -->
+ <script>
+    $("#makeapp").click(function(){
+         $.post('/makeappoinment',$('#appform').serialize());
+       
 
-
+         
+    });
+ </script>
     @endsection

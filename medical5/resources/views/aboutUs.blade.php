@@ -10,25 +10,21 @@
 
                 <div class="card-body">
 
-                    <p> text here</p>
+                    <p> The General Authority of Al-Basel Hospital for Diseases and Cardiac Surgery in Latakia is a body
+Public health scientific training enjoys legal personality and financial independence
+The administration has its own budget and is linked to the Minister of Health, based in Lattakia Governorate
+It deals with heart diseases and surgery, and the authority was established by decree
+Legislative No. 9 of 2012 based on Law No. 17 of 2008
+Related to healthy general things.</p>
                 </br> <br>
 
 
       <div class="medilife-gallery-area owl-carousel">
+     
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g1.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g1.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+        
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g2.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g2.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+       
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
             <img src="img/bg-img/g3.jpg" alt="">
@@ -38,24 +34,14 @@
         </div>
 
         <!-- Single Gallery Item -->
-        <div class="single-gallery-item">
-            <img src="img/bg-img/g4.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g4.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div>
+       
         <div class="single-gallery-item">
            <img src="img/bg-img/g5.jpg" alt="">
             <div class="view-more-btn">
                 <a href="img/bg-img/g5.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-         <div class="single-gallery-item">
-            <img src="img/bg-img/g6.jpg" alt="">
-            <div class="view-more-btn">
-                <a href="img/bg-img/g6.jpg" class="btn gallery-img">See More +</a>
-            </div>
-        </div> 
+         
         
         <div class="single-gallery-item">
             <img src="img/bg-img/g7.jpg" alt="">
@@ -81,8 +67,46 @@
                 <a href="img/bg-img/g10.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g11.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g11.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g12.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g12.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g13.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g13.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+     
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g15.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g15.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g16.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g16.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+       
+       
+        <div class="single-gallery-item">
+            <img src="img/bg-img/g20.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="img/bg-img/g20.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
     </div>
-
 
 </div>
 
@@ -112,7 +136,21 @@
                 <div class="col-12 col-lg-4">
                     <div class="video-content">
                         <h2>Take care of your heart</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <p>The General Authority of Al-Basel Hospital for Diseases and Cardiac Surgery in Latakia is a body
+Public health scientific training enjoys legal personality and financial independence
+The administration has its own budget and is linked to the Minister of Health, based in Lattakia Governorate
+It deals with heart diseases and surgery, and the authority was established by decree
+Legislative No. 9 of 2012 based on Law No. 17 of 2008
+Related to healthy general things.
+As the body to:
+Providing emergency, diagnostic, therapeutic and surgical medical care
+For its reviewers of heart diseases and surgery.
+• Provide training at all levels in the medical field in what is within
+The body's specializations in heart diseases and surgery.
+• Carrying out medical and health research related to the authority’s mandate in
+Heart diseases and surgery.
+• Provide weekly lectures and publish them via the hospital page on
+Facebook social networking site</p>
                     </div>
                 </div>
             </div>

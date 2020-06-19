@@ -404,7 +404,7 @@
                         <div class="column">
                         
                             <div class="widget-title">
-                                 <button class="btn"> <b>Room </br> Diagram </b></button>
+                                 <button class="btn" onclick="window.location.href = '/roomD';"> <b>Room </br> Diagram </b></button>
                             </div>
                             
                             </div>

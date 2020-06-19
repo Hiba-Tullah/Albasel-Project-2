@@ -1,265 +1,393 @@
-
-@extends('layout.master3')
-@section('content')
-
-
-<style>
-         body,
-         html{
-             min-height:100%;     
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-          body {
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+  <meta charset="utf-8" />
+    <style>
+    body, html {
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+    box-sizing: border-box;
+    }
+    body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
               background-size: cover;            
         }
-
-* { 
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 150px;
-  padding: 10px;
-  height: 150px;
-  
-  margin:5px;
-  
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-         .bg-img {
-            /* The image used */
-          background-image: url("run44.jpg");
-
-            /* Center and scale the image nicely */
-
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: cover;
-           position:relative;
-           background-attachment:fixed;
-
+    /* The image used 
+    .bg-img {
+   
+    background-image: url("run44.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }*/
+    /* Add styles to the form container */
+    .container {
+            position:fixed;
+            left: 200px;
+            margin: 20px;
+            max-width: 550px;
+            padding: 10px;
+            background-color: rgba(80, 151, 164, 0.55);
+          //  border:groove;
+          height:590px;
+        //  border:solid;
         }
-           .container {
-          position: fixed;
-         // right: 70px ;
-          //left: 100;
-            margin: 10px 250px;
-            max-width: none ;
-            padding: 0px;
-           background-color: none;
-         //  float:left;
+    .firstFbeds{
+        position:fixed;
+        left:170px;
+        top:100px;
+        background-color:rgba(80, 151, 164, 0.55);
+        border:groove;
+        padding:4px 7px;
+        width:1000px;
+        height:100px;
+    }
+     .secondFbeds{
+         position:fixed;
+        left:170px;
+        top:220px;
+        background-color:rgba(80, 151, 164, 0.55);
+        border:groove;
+        padding:4px 7px;
+        width:1000px;
+        height:100px;
+    }
+   
+    .thirdFbeds{
+         position:fixed;
+        left:170px;
+        top:340px;
+        background-color:rgba(80, 151, 164, 0.55);
+        border:groove;
+        padding:4px 7px;
+        width:1000px;
+        height:100px;
+    }
 
-            }
-          
-          .icon {
-            position: fixed;
-            right:20px;
-            top: 12px;
-        }
-          .dropdown {
-    position: fixed;
-    display: inline-block;
-    top: 12px;
-    right:10px;
-}
-          .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-  //  min-width: 160px;
-   box-shadow: 0px 12px 16px 0px #3e8e41;
-   // z-index: 1;
-}
+    .btn{
+      // position:absolute;
+        width:55px;
+        height:20px;
+       / display: block;
+      / float:right;
+      margin-top:5px;
+      margin-left:-7px;
+  /    padding:-2px ;
+      text-align: start;
+      
+      border-bottom-color:black;
+      font-family: Calibri, sans-serif;
+    font-size:13px;
+    font-weight: bold
+    }
+    .f1{
 
-          .dropdown-content a {
-    color: black;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-}
+ position:absolute;
+       // left:150px;
+        //top:50px;
+        background-color:none;
+        //border:groove;
+        padding:4px 5px;
+        width:50px;
+        height:80px;
+       // float:left;
 
-.dropdown-content a:hover {background-color: #ddd;}
+    }
+    #bed1f1{
 
-.dropdown:hover .dropdown-content {display: block;}
+ position:absolute;
+       left:70px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+        margin-right:10px;
+    }
+    .bed2f1{
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+ position:absolute;
+       left:150px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+        margin-right:10px;
+    }
+    .bed3f1{
 
+ position:absolute;
+       left:230px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+    .bed4f1{
 
-.icon .badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 5px 10px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-}
+ position:absolute;
+       left:310px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+    .bed5f1{
 
+ position:absolute;
+      left:390px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+    .bed6f1{
 
+ position:absolute;
+       left:470px;
+       // top:50px;
+        background-color:;
+        border:groove;
+       padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+    .bed7f1{
 
+ position:absolute;
+       left:550px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+    .bed8f1{
 
+ position:absolute;
+       left:620px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        margin:0px 10px;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+    .bed9f1{
 
+ position:absolute;
+       left:700px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        margin:0px 10px;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+     .bed10f1{
 
-          .icon-bar {
-          position: fixed;
-            left: 0px;
-            top: 0px;
-          //  display:none;
-             }
+ position:absolute;
+       left:780px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        margin:0px 10px;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+      .bed11f1{
+
+ position:absolute;
+       left:860px;
+       // top:50px;
+        background-color:;
+        border:groove;
+        margin:0px 10px;
+        padding:6px 11.5px;
+        width:70px;
+        height:80px;
+        float:left;
+    }
+   
     
 
-        .icon-bar a {
-          display: block;
-          text-align: center;
-          padding: 16px;
-          transition: all 0.3s   ease;
-          color: white;
-          font-size: 20px;
-        }
-
-        .icon-bar a:hover {
-            background-color: #000;
-          //  display: inline;
-        }
-
-        .facebook {
-          background: #3B5998;
-          color: white;
-        }
-
-        .twitter {
-          background: #55ACEE;
-          color: white;
-        }
-
-        .google {
-          background: #dd4b39;
-          color: white;
-        }
-
-        .linkedin {
-          background: #007bb5;
-          color: white;
-        }
-
-        .youtube {
-          background: #bb0000;
-          color: white;
-        }
-
-        .content {
-          margin-left: 75px;
-          font-size: 30px;
-        }
-
-
-
-        .btn {
-           background-color: rgba(80, 151, 164, 0.55)  ;
-           border: none;
-           color: black;
-         //  padding: 16px 20px;
-           text-align: center;
-           font-size: 16px;
-           margin: 6px 10px;
-           transition: 0.1s;
-           height: 100px;
-           width: 120px;
-           opacity: 0.98;
-           font-size: initial;
-           text-transform: uppercase;
-           padding: 5px 5px;
-          border-radius: 16px;
-          float:left;
-          cursor: pointer;
-            }
-
-        .btn:hover 
-           {
-     //   background-color: #154360 ;
-     background-color: #4CAF50;
-
-     
-          color: white;
-            }
-
-
-
-             /* Dropdown Button */
-.dropbtnn {
-     background-color: rgba(80, 151, 164, 0.55)  ;
-           border: none;
-           color: black;
-         //  padding: 16px 20px;
-           text-align: center;
-           font-size: 16px;
-           margin: 6px 10px;
-           transition: 0.1s;
-           height: 100px;
-           width: 120px;
-           opacity: 0.98;
-           font-size: initial;
-           text-transform: uppercase;
-           padding: 5px 5px;
-          border-radius: 16px;
-          float:left;
-          cursor: pointer;
+    .Button {
+    font-family: Calibri, sans-serif;
+    font-size:13px;
+    font-weight: bold;
+    width: 160px;
+    height: 25px;
+    background:grey;
+    color: white
+}
+.selected.bed1f1 {
+    
+    background:red;
+}
+.mystyle {
+ 
+  
+  background-color: red;
+  color: white;
+  
+}
+.mystyle2 {
+ 
+  
+  background-color: green;
+  color: white;
+  
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdownn {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdownn-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdownn-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdownn-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdownn:hover .dropdownn-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownn:hover .dropbtnn {background-color: #3e8e41;} 
-   
-       
-        
     </style>
+
+
+</head>
+<body>
+ 
+    <div class="bg-img">
        
 
-   
-    @yield('styles')
+            <div class="firstFbeds">
 
+                <div class="f1">First Floor </div>
+                @php 
+                    $cnt=1;
+                @endphp
+                
+                @foreach($first as $item)
+                 <div @if($cnt==1)
+                     id="bed{{$cnt}}f1"
+                     class="@if($item->status==1) mystyle
+                         @else mystyle2 
+                         @endif"
+                  @else class="bed{{$cnt}}f1
+                         @if($item->status==1) mystyle
+                         @else mystyle2 
+                         @endif" 
+                  @endif >
+                    bed {{$cnt}}<br />
+                    R {{$cnt}}
+                <form action="changestatus" method="post">
+                    @csrf
+                    <input type="hidden" value="{{$item->id}}" name="id" />
+                    <button type="submit" class="btn">
+                        Change
+                    </button>
 
+                </form> 
+                    
+                </div>
+                @php
+                    $cnt++;
+                @endphp
+                @endforeach
+            </div>
+            
+        <div class="secondFbeds">
 
+            <div class="f1">Second Floor </div>
+                @php 
+                    $cnt=1;
+                @endphp
+                
+                @foreach($second as $item)
+                 <div @if($cnt==1)
+                     id="bed{{$cnt}}f1"
+                     class="@if($item->status==1) mystyle
+                         @else mystyle2 
+                         @endif"
+                  @else class="bed{{$cnt}}f1
+                         @if($item->status==1) mystyle
+                         @else mystyle2 
+                         @endif" 
+                  @endif >
+                    bed {{$cnt}}<br />
+                    R {{$cnt}}
+                <form action="changestatus" method="post">
+                    @csrf
+                    <input type="hidden" value="{{$item->id}}" name="id" />
+                    <button type="submit" class="btn">
+                        Change
+                    </button>
 
+                </form> 
+                    
+                </div>
+                @php
+                    $cnt++;
+                @endphp
+                @endforeach
+       
+            </div>
+            
+    <div class="thirdFbeds">
 
-@endsection
+        <div class="f1">Third Floor </div>
+                @php 
+                    $cnt=1;
+                @endphp
+                
+                @foreach($third as $item)
+                 <div @if($cnt==1)
+                     id="bed{{$cnt}}f1"
+                     class="@if($item->status==1) mystyle
+                         @else mystyle2 
+                         @endif"
+                  @else class="bed{{$cnt}}f1
+                         @if($item->status==1) mystyle
+                         @else mystyle2 
+                         @endif" 
+                  @endif >
+                    bed {{$cnt}}<br />
+                    R {{$cnt}}
+                <form action="changestatus" method="post">
+                    @csrf
+                    <input type="hidden" value="{{$item->id}}" name="id" />
+                    <button type="submit" class="btn">
+                        Change
+                    </button>
+
+                </form> 
+                    
+                </div>
+                @php
+                    $cnt++;
+                @endphp
+                @endforeach
+    </div>
+       
+</body>
+</html>

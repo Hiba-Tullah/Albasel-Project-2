@@ -107,7 +107,10 @@
 }
 
 
-
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
 
 
 
@@ -570,20 +573,464 @@
                             
                             
                              </div> 
-                              <div class="column">
-                       
-                            <div class="widget-title">
-                                <button class="btn" onclick="window.location.href = '/pp';"> <b>My Results</b></button>
+                            
+                             <div class="column">
+
+                              <div class="widget-title">
+          <button class="btncorona" data-toggle="modal" data-target="#progress"> <b>Corona <br> Status </b></button>
                             </div>
+                  <div id="progress" class="modal fade">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h1 class="modal-title">Update My Health Status:</h1>
+
+                            </div>
+                            <div class="modal-body">
+                                   <label>Date:</label>
+                                <form role="form" method="POST" action="">
+                                    <input type="hidden" name="_token" value="">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" name="date" id="date" placeholder="Date">
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Age:</label>
+                                      <div class="question-body clearfix notranslate ">
+                    
+    
+    
+        
+            <div class="answer-option-col
+                            answer-option-col-2">
+        
+        <div class="answer-option-cell">
+            
+    
+
+    
+    
+
+    <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
+        <input id="436105797_2893076931" aria-labelledby="436105797_2893076931_label" name="436105797" role="radio" class="radio-button-input " value="2893076931" aria-checked="false" type="radio">
+        <label data-sm-radio-button-label="" id="436105797_2893076931_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076931">
+            <span class="radio-button-display ">
+                    
+            </span>
+
+            
+                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                    &lt;18
+                    
+                </span>
+            
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+            
+    
+    
+
+    <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
+        <input id="436105797_2893076932" aria-labelledby="436105797_2893076932_label" name="436105797" role="radio" class="radio-button-input " value="2893076932" aria-checked="false" type="radio">
+        <label data-sm-radio-button-label="" id="436105797_2893076932_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076932">
+            <span class="radio-button-display ">
+                    
+            </span>
+
+            
+                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                    18-25
+                    
+                </span>
+            
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+            
+    
+
+    <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
+        <input id="436105797_2893076933" aria-labelledby="436105797_2893076933_label" name="436105797" role="radio" class="radio-button-input " value="2893076933" aria-checked="false" type="radio">
+        <label data-sm-radio-button-label="" id="436105797_2893076933_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076933">
+            <span class="radio-button-display ">
+                    
+            </span>
+
+            
+                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                    26-33
+                    
+                </span>
+            
+        </label>
+    </div>
+
+        </div>
+        
+            </div>
+        
+    
+        
+            <div class="answer-option-col
+                            answer-option-col-2">
+        
+        <div class="answer-option-cell">
+            
+    
+    
+    
+
+    <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
+        <input id="436105797_2893076934" aria-labelledby="436105797_2893076934_label" name="436105797" role="radio" class="radio-button-input " value="2893076934" aria-checked="false" type="radio">
+        <label data-sm-radio-button-label="" id="436105797_2893076934_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076934">
+            <span class="radio-button-display ">
+                    
+            </span>
+
+            
+                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                    34-41
+                    
+                </span>
+            
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+            
+   
+
+    <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
+        <input id="436105797_2893076935" aria-labelledby="436105797_2893076935_label" name="436105797" role="radio" class="radio-button-input " value="2893076935" aria-checked="false" type="radio">
+        <label data-sm-radio-button-label="" id="436105797_2893076935_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076935">
+            <span class="radio-button-display ">
+                    
+            </span>
+
+            
+                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                    42-49
+                    
+                </span>
+            
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+      
+    
+
+    <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
+        <input id="436105797_2893076936" aria-labelledby="436105797_2893076936_label" name="436105797" role="radio" class="radio-button-input " value="2893076936" aria-checked="false" type="radio">
+        <label data-sm-radio-button-label="" id="436105797_2893076936_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076936">
+            <span class="radio-button-display ">
+                    
+            </span>
+
+            
+                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                    &gt;49
+                    
+                </span>
+            
+        </label>
+    </div>
+
+        </div>
+        
+            </div>
+        
+    
+    
+    
+
+    
+    
+
+    
+
+                </div>
+                                        <label class="control-label">Fever or chills:</label>
+                                     <p>
+                                   <label>Celsius</label>
+                             <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+                                        </p>
+                                    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+                                               <script>
+                                  function temperatureConverter(valNum) {
+                                  valNum = parseFloat(valNum);
+                                  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+                                       }
+                                               </script>
+
+                                      <label class="control-label">Cough:</label>
+                                         <div class="form-group">
+                                             <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Shortness of breath or difficulty breathing</label>
+                                         <div class="form-group">
+                                              <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Fatigue</label>
+                                         <div class="form-group">
+                                             <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Muscle or body aches</label>
+                                         <div class="form-group">
+                                             <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Headache</label>
+                                         <div class="form-group">
+                                            <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">New loss of taste or smell</label>
+                                         <div class="form-group">
+                                              <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Sore throat</label>
+                                         <div class="form-group">
+                                             <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Congestion or runny nose</label>
+                                         <div class="form-group">
+                                             <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Nausea or vomiting</label>
+                                         <div class="form-group">
+                                             <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                  
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                     <p>
+                                   <label></label>
+                             
+                                        </p>
+                                    <p><span id="outputFahrenheit"></span></p>
+
+                                               
+
+                                      <label class="control-label">Diarrhea</label>
+                                         <div class="form-group">
+                                              <select name="Cough"  > 
+                                    <option value="1">None</option>
+                                    <option value="2">Mild</option>
+                                    <option value="8">Bad</option> 
+                                     
+                                </select>  
+                                        </div>
+
+
+                                    </div>
+
+                                  
+                                    <div class="form-group">
+                                        <label class="danger">Notes:Look for emergency warning signs for COVID-19. If someone is showing any of these signs, seek emergency medical care immediately:
+Trouble breathing
+Persistent pain or pressure in the chest
+New confusion
+Inability to wake or stay awake
+Bluish lips or face
+Call your medical provider for any other symptoms that are severe or concerning to you.</label>
+                                        <div>
+                                            <input type="text" class="form-control input-lg" name="email" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div>
+                                            <button type="submit" class="btn btn-success">
+                                                Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                     
+                                    <div class="form-group">
+                                        <div>
+                                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                             
                             </div> 
-                            <div class="column">
-                       
-                            <div class="widget-title">
-                                <button class="btncorona" onclick="window.location.href = '/pp';"> <b>Corona <br> Status </b></button>
-                            </div>
-                            
-                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                           
 
 
