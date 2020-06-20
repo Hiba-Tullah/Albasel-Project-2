@@ -253,3 +253,5 @@ Route::get('/ventilation', function () {
 Route::post('/changestatus','BedsController@changeStatus');
 Route::post('/makeappoinment','AppoinmentController@make');
 Route::resource('/tours','ToursController');
+Route::post('/storehist','HistoryController@store');
+Route::get('/hist','HistoryController@index');

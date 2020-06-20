@@ -6,14 +6,14 @@
 <style>
          body,
          html{
-             min-height:100%;     
+             min-height:100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
           body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
-              background-size: cover;            
+              background-size: cover;
         }
 
 * {
@@ -26,9 +26,9 @@
   width: 150px;
   padding: 10px;
   height: 150px;
-  
+
   margin:5px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -61,7 +61,7 @@
          //  float:left;
 
             }
-          
+
           .icon {
             position: fixed;
             right:20px;
@@ -120,7 +120,7 @@
             top: 0px;
           //  display:none;
              }
-    
+
 
         .icon-bar a {
           display: block;
@@ -187,12 +187,12 @@
             }
 
 
-             .btncorona:hover 
+             .btncorona:hover
            {
      //   background-color: red ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
@@ -217,21 +217,21 @@
           cursor: pointer;
             }
 
-        .btn:hover 
+        .btn:hover
            {
      //   background-color: #154360 ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
-       
-        
-    </style>
-       
 
-   
+
+    </style>
+
+
+
     @yield('styles')
 
 
@@ -251,7 +251,7 @@
 
         <!-- Main Footer Area     class="section-padding-100"-->
         <div class="main-section-area">
-           
+
 
 
 
@@ -261,17 +261,17 @@
                  <div class="column" >
 
                             <div class="widget-title">
-                               
+
                                 <button class="btn" > <b>My Profile </b></button>
                             </div>
-                           
+
                  </div>
-                      
+
                       <div class="column" >
 
                             <div class="widget-title">
-                               
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm">
+
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm">
                                 <b>  Update <br>My Medical<br> Status </b>
                           </button>
                             </div>
@@ -283,7 +283,7 @@
                                 <h1 class="modal-title"> Update My Medical Status</h1>
                             </div>
                             <div class="modal-body">
-                                <form role="form" method="POST" action="">
+                                <form role="form" method="POST" action="/storehist" enctype="multipart/form-data">
                                     <input type="hidden" name="_token" value="">
                                     <div class="form-group">
                                         <label class="control-label">My X-Ray</label>
@@ -291,38 +291,34 @@
                                             <input type="text" class="form-control input-lg" name="email" value="">
                                              <form action="/action_page.php">
                                     <label for="img">Select image:</label>
-                                    <input type="file" id="img" name="img" accept="image/*">
-                                   
-                                  </form>
+                                    <input type="file" id="img" name="xray" accept="image/*">
+
+
                                         </div>
                                     </div>
                                      <div class="form-group">
                                         <label class="control-label">My Heart Tests</label>
                                         <div>
-                                            <input type="text" class="form-control input-lg" name="email" value="">
-                                             <form action="/action_page.php">
                                     <label for="img">Select image:</label>
-                                    <input type="file" id="img" name="img" accept="image/*">
-                                    
-                                  </form>
+                                    <input type="file" id="img" name="heart" accept="image/*">
+
+
                                         </div>
                                     </div>
                                      <div class="form-group">
                                         <label class="control-label">My Blood Test</label>
                                         <div>
-                                            <input type="text" class="form-control input-lg" name="email" value="">
-                                             <form action="/action_page.php">
                                     <label for="img">Select image:</label>
-                                    <input type="file" id="img" name="img" accept="image/*">
-                                  
-                                  </form>
+                                    <input type="file" id="img" name="blood" accept="image/*">
+
+
                                         </div>
                                     </div>
-                                   
+
                                     <div class="form-group">
                                         <label class="control-label"></br>Medical history</label>
                                         <div>
-                                            <input type="textarea" class="form-control input-lg" name="">
+                                            <input type="textarea" class="form-control input-lg" name="history">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -332,6 +328,7 @@
                                             </button>
                                         </div>
                                     </div>
+                                    @csrf
                                     <div class="form-group">
                                         <div>
                                             <button type="submit" class="btn btn-secondary" data-dismiss="modal">
@@ -344,236 +341,236 @@
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
-                           
+
                  </div>
-                      
+
 
 
 
                  <div class="column">
-                       
+
                             <div class="widget-title">
                               <button class="btn"> <b> My</br>operations</b></button>
-                            </div> 
+                            </div>
                 </div>
-                             
-                        
+
+
 
 
                 <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>My</br> cardiac</br> catheter</b> </button>
                             </div>
-                            
+
                 </div>
-                      
-                            
+
+
                 <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>My</br>Blood </br>analyzes</b> </button>
                             </div>
-                            
+
                 </div>
-                       
+
 
                 <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>My</br>X ray</b> </button>
                             </div>
-                            
+
                 </div>
 
                 <div class="column">
-                        
+
                             <div class="widget-title">
-                                 <button class="btn"> <b>My</br>Medical</br>History</b> </button>
+                                 <a href="/hist"><button class="btn"> <b>My</br>Medical</br>History</b> </button></a>
                             </div>
-                            
+
                 </div>
 
                     <div class="column">
-                       
+
                             <div class="widget-title">
                               <button class="btn"> <b> Doctors  </br>Duties</b></button>
                             </div>
-                            
+
                             </div>
 
 
                              <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Send</br>Complaints</b></button>
                             </div>
-                            
-                             
+
+
                             </div>
-                        
 
 
 
-                     
+
+
 
 
 
                   </div>
-                      
-                        
+
+
 
 
                        <div class="row" style="padding-left: 60px">
 
-                             
-                        
+
+
 
 
 
                          <div class="column">
-                      
+
                             <div class="widget-title"  >
                                  <button class="btn"> <b>Send </br>Messages</b></button>
                             </div>
-                            
+
                             </div>
-                  
-                                
-                                 
 
 
 
-                            
+
+
+
+
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Hospital's </br> News</b></button>
                             </div>
-                            
+
                             </div>
-                       
-                                 
+
+
                         <div class="column">
-                       
+
                             <div class="widget-title" >
                                  <button class="btn"> <b> Gift  </br>credit</b></button>
                             </div>
-                            
-                              
+
+
                             </div>
 
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Medical  </br>Library</b></button>
                             </div>
-                            
-                              
+
+
                             </div>
-                             
-                       
+
+
 
 
 
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Related  </br>Websites</b></button>
                             </div>
-                            
-                              
+
+
                             </div>
-                          
-                       
-                          
-                       
 
 
-                          
-                      
 
-                    
+
+
+
+
+
+
+
 
                          <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>  Aman</br> Portal </b></button>
                             </div>
-                            
-                                
+
+
                         </div>
 
 
 
                         <div class="column">
-                      
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Albsel  </br>Portal<b></button>
                             </div>
-                            
+
                             </div>
 
                             <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>   Health Care </br>Dectionary </b></button>
                             </div>
-                            
-                            
+
+
                              </div>
                           <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Medical </br>Articles</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
 
 
 
-                     
+
                              </div>
 
 
                   <div class="row" style="padding-left: 60px">
-                    
-                   
-                             
-                            
-                            
+
+
+
+
+
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Facebook</b></button>
                             </div>
-                            
-                            </div> 
-                           
+
+                            </div>
+
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Youtube</b></button>
                             </div>
-                            
+
                             </div>
                              <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b> Search </b></button>
                             </div>
-                            
-                            
-                             </div> 
+
+
+                             </div>
                               <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Pay</br>Bill </b></button>
                             </div>
-                            
-                            
-                             </div> 
-                            
+
+
+                             </div>
+
                              <div class="column">
 
                               <div class="widget-title">
@@ -593,181 +590,181 @@
                                     <input type="hidden" name="_token" value="">
                                     <div class="form-group">
                                         <input type="date" class="form-control" name="date" id="date" placeholder="Date">
-                                        
+
                                     </div>
                                     <div class="form-group">
                                       <label>Age:</label>
                                       <div class="question-body clearfix notranslate ">
-                    
-    
-    
-        
+
+
+
+
             <div class="answer-option-col
                             answer-option-col-2">
-        
-        <div class="answer-option-cell">
-            
-    
 
-    
-    
+        <div class="answer-option-cell">
+
+
+
+
+
 
     <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
         <input id="436105797_2893076931" aria-labelledby="436105797_2893076931_label" name="436105797" role="radio" class="radio-button-input " value="2893076931" aria-checked="false" type="radio">
         <label data-sm-radio-button-label="" id="436105797_2893076931_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076931">
             <span class="radio-button-display ">
-                    
+
             </span>
 
-            
+
                 <span class="radio-button-label-text question-body-font-theme user-generated ">
                     &lt;18
-                    
+
                 </span>
-            
+
         </label>
     </div>
 
         </div>
-        
-    
-        
+
+
+
         <div class="answer-option-cell">
-            
-    
-    
+
+
+
 
     <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
         <input id="436105797_2893076932" aria-labelledby="436105797_2893076932_label" name="436105797" role="radio" class="radio-button-input " value="2893076932" aria-checked="false" type="radio">
         <label data-sm-radio-button-label="" id="436105797_2893076932_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076932">
             <span class="radio-button-display ">
-                    
+
             </span>
 
-            
+
                 <span class="radio-button-label-text question-body-font-theme user-generated ">
                     18-25
-                    
+
                 </span>
-            
+
         </label>
     </div>
 
         </div>
-        
-    
-        
+
+
+
         <div class="answer-option-cell">
-            
-    
+
+
 
     <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
         <input id="436105797_2893076933" aria-labelledby="436105797_2893076933_label" name="436105797" role="radio" class="radio-button-input " value="2893076933" aria-checked="false" type="radio">
         <label data-sm-radio-button-label="" id="436105797_2893076933_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076933">
             <span class="radio-button-display ">
-                    
+
             </span>
 
-            
+
                 <span class="radio-button-label-text question-body-font-theme user-generated ">
                     26-33
-                    
+
                 </span>
-            
+
         </label>
     </div>
 
         </div>
-        
+
             </div>
-        
-    
-        
+
+
+
             <div class="answer-option-col
                             answer-option-col-2">
-        
+
         <div class="answer-option-cell">
-            
-    
-    
-    
+
+
+
+
 
     <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
         <input id="436105797_2893076934" aria-labelledby="436105797_2893076934_label" name="436105797" role="radio" class="radio-button-input " value="2893076934" aria-checked="false" type="radio">
         <label data-sm-radio-button-label="" id="436105797_2893076934_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076934">
             <span class="radio-button-display ">
-                    
+
             </span>
 
-            
+
                 <span class="radio-button-label-text question-body-font-theme user-generated ">
                     34-41
-                    
+
                 </span>
-            
+
         </label>
     </div>
 
         </div>
-        
-    
-        
+
+
+
         <div class="answer-option-cell">
-            
-   
+
+
 
     <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
         <input id="436105797_2893076935" aria-labelledby="436105797_2893076935_label" name="436105797" role="radio" class="radio-button-input " value="2893076935" aria-checked="false" type="radio">
         <label data-sm-radio-button-label="" id="436105797_2893076935_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076935">
             <span class="radio-button-display ">
-                    
+
             </span>
 
-            
+
                 <span class="radio-button-label-text question-body-font-theme user-generated ">
                     42-49
-                    
+
                 </span>
-            
+
         </label>
     </div>
 
         </div>
-        
-    
-        
+
+
+
         <div class="answer-option-cell">
-      
-    
+
+
 
     <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-436105797">
         <input id="436105797_2893076936" aria-labelledby="436105797_2893076936_label" name="436105797" role="radio" class="radio-button-input " value="2893076936" aria-checked="false" type="radio">
         <label data-sm-radio-button-label="" id="436105797_2893076936_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="436105797_2893076936">
             <span class="radio-button-display ">
-                    
+
             </span>
 
-            
+
                 <span class="radio-button-label-text question-body-font-theme user-generated ">
                     &gt;49
-                    
+
                 </span>
-            
+
         </label>
     </div>
 
         </div>
-        
+
             </div>
-        
-    
-    
-    
 
-    
-    
 
-    
+
+
+
+
+
+
+
 
                 </div>
                                         <label class="control-label">Fever or chills:</label>
@@ -786,12 +783,12 @@
 
                                       <label class="control-label">Cough:</label>
                                          <div class="form-group">
-                                             <select name="Cough"  > 
+                                             <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -800,20 +797,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Shortness of breath or difficulty breathing</label>
                                          <div class="form-group">
-                                              <select name="Cough"  > 
+                                              <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -822,20 +819,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Fatigue</label>
                                          <div class="form-group">
-                                             <select name="Cough"  > 
+                                             <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -844,20 +841,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Muscle or body aches</label>
                                          <div class="form-group">
-                                             <select name="Cough"  > 
+                                             <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -866,20 +863,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Headache</label>
                                          <div class="form-group">
-                                            <select name="Cough"  > 
+                                            <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -888,20 +885,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">New loss of taste or smell</label>
                                          <div class="form-group">
-                                              <select name="Cough"  > 
+                                              <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -910,20 +907,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Sore throat</label>
                                          <div class="form-group">
-                                             <select name="Cough"  > 
+                                             <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -932,20 +929,20 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Congestion or runny nose</label>
                                          <div class="form-group">
-                                             <select name="Cough"  > 
+                                             <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
@@ -954,21 +951,21 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Nausea or vomiting</label>
                                          <div class="form-group">
-                                             <select name="Cough"  > 
+                                             <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
-                                  
+                                    <option value="8">Bad</option>
+
+                                </select>
+
                                         </div>
 
 
@@ -977,26 +974,26 @@
                                         <label class="control-label"></label>
                                      <p>
                                    <label></label>
-                             
+
                                         </p>
                                     <p><span id="outputFahrenheit"></span></p>
 
-                                               
+
 
                                       <label class="control-label">Diarrhea</label>
                                          <div class="form-group">
-                                              <select name="Cough"  > 
+                                              <select name="Cough"  >
                                     <option value="1">None</option>
                                     <option value="2">Mild</option>
-                                    <option value="8">Bad</option> 
-                                     
-                                </select>  
+                                    <option value="8">Bad</option>
+
+                                </select>
                                         </div>
 
 
                                     </div>
 
-                                  
+
                                     <div class="form-group">
                                         <label class="danger">Notes:Look for emergency warning signs for COVID-19. If someone is showing any of these signs, seek emergency medical care immediately:
 Trouble breathing
@@ -1016,7 +1013,7 @@ Call your medical provider for any other symptoms that are severe or concerning 
                                             </button>
                                         </div>
                                     </div>
-                                     
+
                                     <div class="form-group">
                                         <div>
                                             <button type="submit" class="btn btn-secondary" data-dismiss="modal">
@@ -1025,33 +1022,33 @@ Call your medical provider for any other symptoms that are severe or concerning 
                                         </div>
                                     </div>
                                 </form>
-                            
-                            </div> 
+
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                          
 
 
-                             
+
+
 
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Logout</b></button>
                             </div>
-                            
-                            </div> 
 
-                             
-                             
-                      
+                            </div>
+
+
+
+
                           </div>
 
 
 
-                       
+
    </div>
 </div>
 

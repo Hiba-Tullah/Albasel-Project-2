@@ -19,6 +19,7 @@ class CreateMedicalHistoriesTable extends Migration
             $table->string('xray');
             $table->string('heart');
             $table->string('blood');
+            $table->string('history');
             $table->timestamps();
         });
     }
