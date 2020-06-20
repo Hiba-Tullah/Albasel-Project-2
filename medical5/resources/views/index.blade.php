@@ -21,7 +21,7 @@
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
-  
+
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
@@ -44,7 +44,7 @@
   color: white;
 }
 
-.html {width: 90%; background-color: #f44336;} 
+.html {width: 90%; background-color: #f44336;}
 .css {width: 80%; background-color:#808080;}
 .js {width: 65%; background-color: #2196F3;}
 .php {width: 60%; background-color: #4CAF50;}
@@ -73,7 +73,7 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
@@ -95,11 +95,11 @@ $(document).ready(function(){
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
                             <div class="hero-slides-content">
-                                <h2 data-animation="fadeInUp" data-delay="500ms"> &nbsp;&nbsp;  <br><br><br>  &nbsp;&nbsp;Experienced Doctors That <br> 
+                                <h2 data-animation="fadeInUp" data-delay="500ms"> &nbsp;&nbsp;  <br><br><br>  &nbsp;&nbsp;Experienced Doctors That <br>
                                 &nbsp;&nbsp;&nbsp;You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="600ms">  &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;We Are Here For Your Care </h6>
 <a  href="#doctor_part" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms"> Our Doctors<span>+</span></a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ $(document).ready(function(){
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
                             <div class="hero-slides-content">
-                               
+
                                 <h2 data-animation="fadeInUp" data-delay="500ms"> &nbsp;&nbsp;  <br><br>  &nbsp;&nbsp;Medical Services  <br>
                                 &nbsp;&nbsp;All Day Long 24/7</h2>
                                <h6 data-animation="fadeInUp" data-delay="600ms"></h6>
@@ -141,10 +141,10 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                            <div class="hero-slides-content">  
+                            <div class="hero-slides-content">
                                   <h2 data-animation="fadeInUp" data-delay="500ms"> &nbsp;&nbsp;  <br><br>  &nbsp;&nbsp; Medical & Educational Portal </h2> <br>
-                               
-                                
+
+
                                   <h6 data-animation="fadeInUp" data-delay="600ms">  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                         &nbsp;&nbsp;          </h6>
                                 <a  href="#part3" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Medical Blog <span>+</span></a>
@@ -157,7 +157,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -193,7 +193,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -211,7 +211,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@ $(document).ready(function(){
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -241,8 +241,8 @@ $(document).ready(function(){
                 <div class="col-12">
 
                     <div class="appointment-form-content">
-                  
-                       
+
+
                         <div class="row no-gutters align-items-center">
 
 
@@ -250,10 +250,11 @@ $(document).ready(function(){
                                 <div class="medilife-appointment-form">
                                     <form onsubmit="return false;" id="appform" >
                                         @csrf
+                                        <input type="hidden" name="location" id="location"/>
                                         <div class="row align-items-end">
-                                           
+
                                             <div class="col-12 col-md-4">
-                                                 
+
                                               <h5 style="color: white">Make an Appointment</h5>
 
                                                 <div class="form-group">
@@ -265,7 +266,7 @@ $(document).ready(function(){
                                                     <option>sergury</option>
                                                     <option>Qathter</option>
                                                     <option>Blood Test</option>
-                                                    
+
                                                 </select>
                                                 </div>
                                             </div>
@@ -285,13 +286,13 @@ $(document).ready(function(){
                                             </div>
                                             <div class="col-12 col-md-2">
                                                 <div class="form-group">
-                                                 
+
                                                     <input type="date" required  class="form-control" name="date" id="date" placeholder="Date">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-2">
                                                 <div class="form-group">
-                                                 
+
                                                     <input type="time" required  class="form-control" name="time" id="time" placeholder="Time">
 
                                                 </div>
@@ -362,7 +363,7 @@ $(document).ready(function(){
         <div class="section_tittle text-center">
         </br> </br> </br>
                 <h4 class="glow">Heroes Of This Week  </h4>
-               
+
                 <p>Congratulations</p>
                 </div> </br>
         <div class="container">
@@ -370,19 +371,19 @@ $(document).ready(function(){
                 <div class="col-12">
                     <div class="appointment-form-content">
                         <div class="row no-gutters align-items-center">
-                           
+
                             <div class="col-12 col-lg-3">
                                 <div class="medilife-contact-info">
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info mb-30">
                                         <img src="img/icons/h1.jpg" alt="">
-                                      
+
                                     </div>
                                     <!-- Single Contact Info -->
-                                    
+
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info">
-                                     
+
                                         <p>Dr Shawrash Mousa  <br>Dr Mouhanad Yousef<br> Dr Bassel Alratel</p>
                                     </div>
                                 </div>
@@ -392,13 +393,13 @@ $(document).ready(function(){
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info mb-30">
                                         <img src="img/icons/h6.png" alt="">
-                                    
+
                                     </div>
                                     <!-- Single Contact Info -->
-                                    
+
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info">
-                                      
+
                                         <p>Dr Imad Haj Husen,Dr Eyad Malla <br> Dr Karam Baddour <br> Dr Alaa Kajo</p>
                                     </div>
                                 </div>
@@ -408,13 +409,13 @@ $(document).ready(function(){
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info mb-30">
                                         <img src="img/icons/h7.png" alt="">
-                                       
+
                                     </div>
                                     <!-- Single Contact Info -->
-                                    
+
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info">
-                                        
+
                                         <p>Dr Sally Almohammad<br>Dr Imad Haj Husen,Dr Eyad Malla <br> Dr Karam Baddour <br></p>
                                     </div>
                                 </div>
@@ -424,13 +425,13 @@ $(document).ready(function(){
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info mb-30">
                                         <img src="img/icons/doc1.png" alt="">
-                                        
+
                                     </div>
                                     <!-- Single Contact Info -->
-                                    
+
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info">
-                                        
+
                                         <p>Syria <br> Damascus <br> Albasel Hospital</p>
                                     </div>
                                 </div>
@@ -450,13 +451,13 @@ $(document).ready(function(){
 <h2> Hospital Sections</h2>
 </br>
 
-</div> 
+</div>
     <div class="medilife-gallery-area owl-carousel">
-     
+
         <!-- Single Gallery Item -->
-        
+
         <!-- Single Gallery Item -->
-       
+
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
             <img src="img/bg-img/g3.jpg" alt="">
@@ -466,15 +467,15 @@ $(document).ready(function(){
         </div>
 
         <!-- Single Gallery Item -->
-       
+
         <div class="single-gallery-item">
            <img src="img/bg-img/g5.jpg" alt="">
             <div class="view-more-btn">
                 <a href="img/bg-img/g5.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-         
-        
+
+
         <div class="single-gallery-item">
             <img src="img/bg-img/g7.jpg" alt="">
             <div class="view-more-btn">
@@ -517,7 +518,7 @@ $(document).ready(function(){
                 <a href="img/bg-img/g13.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-     
+
         <div class="single-gallery-item">
             <img src="img/bg-img/g15.jpg" alt="">
             <div class="view-more-btn">
@@ -530,8 +531,8 @@ $(document).ready(function(){
                 <a href="img/bg-img/g16.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-       
-       
+
+
         <div class="single-gallery-item">
             <img src="img/bg-img/g20.jpg" alt="">
             <div class="view-more-btn">
@@ -564,7 +565,7 @@ $(document).ready(function(){
                                 </div>
                                 <div class="service-content">
                                     <h5>The Best Doctors</h5>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -576,7 +577,7 @@ $(document).ready(function(){
                                 </div>
                                 <div class="service-content">
                                     <h5>Nursery</h5>
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -588,7 +589,7 @@ $(document).ready(function(){
                                 </div>
                                 <div class="service-content">
                                     <h5>Laboratory</h5>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -600,7 +601,7 @@ $(document).ready(function(){
                                 </div>
                                 <div class="service-content">
                                     <h5>Emergency Room</h5>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -611,16 +612,16 @@ $(document).ready(function(){
     </section>
     <!-- ***** About Us Area End ***** -->
 
-   
+
 
     <!-- ***** Gallery2Area Start ***** -->
     <div class="medilife-gallery-area owl-carousel">
         <!-- Single Gallery Item -->
-     
+
         <!-- Single Gallery Item -->
-       
+
         <!-- Single Gallery Item -->
-        
+
 
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
@@ -635,7 +636,7 @@ $(document).ready(function(){
                 <a href="img/bg-img/gg4.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-       
+
          <div class="single-gallery-item">
             <img src="img/bg-img/gg5.jpg" alt="">
             <div class="view-more-btn">
@@ -647,9 +648,9 @@ $(document).ready(function(){
                 <a href="img/bg-img/gg6.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-        
-       
-        
+
+
+
          <div class="single-gallery-item">
             <img src="img/bg-img/gg10.jpg" alt="">
             <div class="view-more-btn">
@@ -662,7 +663,7 @@ $(document).ready(function(){
                 <a href="img/bg-img/gg11.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-        
+
 
     </div>
     <section class="medilife-cool-facts-area section-padding-100-0">
@@ -674,7 +675,7 @@ $(document).ready(function(){
                         <i class="icon-blood-transfusion-2"></i>
                         <h2><span class="counter">32</span></h2>
                         <h6>Blood donations</h6>
-                        
+
                     </div>
                 </div>
                 <!-- Single Cool Fact-->
@@ -683,7 +684,7 @@ $(document).ready(function(){
                         <i class="icon-atoms"></i>
                         <h2><span class="counter">5632</span>k</h2>
                         <h6>Pacients</h6>
-                      
+
                     </div>
                 </div>
                 <!-- Single Cool Fact-->
@@ -692,7 +693,7 @@ $(document).ready(function(){
                         <i class="icon-microscope"></i>
                         <h2><span class="counter">5</span></h2>
                         <h6>Specialities</h6>
-                     
+
                     </div>
                 </div>
                 <!-- Single Cool Fact-->
@@ -701,13 +702,13 @@ $(document).ready(function(){
                         <i class="icon-doctor-1"></i>
                         <h2><span class="counter">47</span></h2>
                         <h6>Doctors</h6>
-                     
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   
+
 
       <!-- ***** Experienced Doctors Area Start ***** -->
   </br>
@@ -756,12 +757,12 @@ $(document).ready(function(){
         <h3>DR Ayham Shaabu</h3>
 <p>Heart specialist</p>
         <img src="img/doctor/doctor2/1.jpg" alt="doctor">
-        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Contact</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
+
       </div>
     </div>
   </div>
@@ -1183,7 +1184,7 @@ $(document).ready(function(){
 
 
 <div class="medica-about-content">
-                                          
+
      <a href="/specialized" class="btn medilife-btn mt-50">View More ... <span>+</span></a>
    </div>
 </div>
@@ -1679,7 +1680,7 @@ $(document).ready(function(){
 <li><a href="https://www.facebook.com/profile.php?id=100011268165725"> <i class="ti-facebook"></i> </a></li>
 <li><a href="#"> <i class="ti-skype"></i> </a></li>
 </ul>
-</div> 
+</div>
 </div>
 <div class="single_text">
 <div class="single_blog_text">
@@ -1735,7 +1736,7 @@ $(document).ready(function(){
 
 
 <div class="medica-about-content">
-                                          
+
      <a href="/resident" class="btn medilife-btn mt-50">View More ... <span>+</span></a>
    </div>
 </div>
@@ -1756,12 +1757,12 @@ $(document).ready(function(){
 </br>
 
 </div>
-    
+
 
 
       <div class="medilife-gallery-area owl-carousel">
 
-    
+
 
         <!-- Single Gallery Item -->
         <div class="single-gallery-item">
@@ -1805,16 +1806,16 @@ $(document).ready(function(){
             <div class="view-more-btn">
                 <a href="img/bg-img/ggg14.jpg" class="btn gallery-img">See More +</a>
             </div>
-        </div> 
+        </div>
          <div class="single-gallery-item">
             <img src="img/bg-img/ggg15.jpg" alt="">
             <div class="view-more-btn">
                 <a href="img/bg-img/ggg15.jpg" class="btn gallery-img">See More +</a>
             </div>
-        </div> 
-        
-        
-        
+        </div>
+
+
+
         <div class="single-gallery-item">
             <img src="img/bg-img/ggg16.jpg" alt="">
             <div class="view-more-btn">
@@ -1827,7 +1828,7 @@ $(document).ready(function(){
                 <a href="img/bg-img/ggg17.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-       
+
          <div class="single-gallery-item">
             <img src="img/bg-img/ggg20.jpg" alt="">
             <div class="view-more-btn">
@@ -1864,24 +1865,24 @@ $(document).ready(function(){
                 <a href="img/bg-img/ggg25.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-       
+
         <div class="single-gallery-item">
             <img src="img/bg-img/ggg29.jpg" alt="">
             <div class="view-more-btn">
                 <a href="img/bg-img/ggg29.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-       
-        
-         
+
+
+
            <div class="single-gallery-item">
             <img src="img/bg-img/ggg35.jpg" alt="">
             <div class="view-more-btn">
                 <a href="img/bg-img/ggg35.jpg" class="btn gallery-img">See More +</a>
             </div>
         </div>
-           
-           
+
+
     </div>
 
 
@@ -1986,37 +1987,37 @@ $(document).ready(function(){
                             <p>Smoking causes structural changes in the heart and the blood it pumps into the body and weakens their ability to function normally.. </p>
                             <a href="/smoking" class="comments">5 Comments</a>
                         </div>
-           
+
                     </div>
 
                 </div>
-               
-                    
+
+
             </div>
             <div class="medica-about-content">
-                                          
+
                    <a href="/medicalBlog" class="btn medilife-btn mt-50" >View More... <span>+</span></a>
                </div>
         </div>
-        
-    </div>
-             
-                    
 
-       
+    </div>
+
+
+
+
  <!-- ***** Blog Area/ Medical Articles End ***** -->
 
     <!-- ***** Blog Area/ Hospital News Start ***** -->
-    
+
 <br>
 <br>
 <br>
 <br>
 
  <div class="container">
-             
+
             <div class="section_tittle text-center">
-                
+
 <h2> Latest Hospital News </h2>
 </br>
 
@@ -2045,10 +2046,10 @@ $(document).ready(function(){
 
                         <!-- Post Content -->
                         <div class="post-content">
-                           
+
                             <a  class="headline">Request for internal offers</a>
-                           
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -2086,10 +2087,10 @@ $(document).ready(function(){
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            
+
                             <a  class="headline">Request for internal offers</a>
-                          
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -2121,29 +2122,29 @@ $(document).ready(function(){
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            
+
                             <a  class="headline">Cardio exercises are good for heart health</a>
-                           
-                           
+
+
                         </div>
-            
+
                     </div>
 
-                   
+
                 </div>
                  <div class="medica-about-content">
-                                          
+
                    <a href="/hospitalNews" class="btn medilife-btn mt-50" >View More... <span>+</span></a>
                </div>
-               
+
             </div>
-            
+
 </div>
 
 
-    
 
-    
+
+
  <!-- ***** Blog Area/ Hospital News End ***** -->
 
 
@@ -2156,7 +2157,7 @@ $(document).ready(function(){
 <h2>Latest Statistics Studies </h2>
 <p>According to the statistical studies conducted at Al-Basel Hospital, the following picture shows the people most at risk of developing heart diseases </p>
 </div>
-     
+
 
 <p>Smoking</p>
 <div class="container">
@@ -2172,7 +2173,7 @@ $(document).ready(function(){
 <div class="container">
   <div class="skills js">65%</div>
 </div>
- 
+
 <p>Renal failure</p>
 <div class="container">
   <div class="skills php">60%</div>
@@ -2180,7 +2181,7 @@ $(document).ready(function(){
 </br>
 </br>
  <div class="medica-about-content">
-                                          
+
                    <a href="/hospitalNews" class="btn medilife-btn mt-50">View More... <span>+</span></a>
                </div>
 </div>
@@ -2188,14 +2189,23 @@ $(document).ready(function(){
 </div>
 </br>
 </br>
-    
+
  <!-- ***** statistics bar End***** -->
  <script>
     $("#makeapp").click(function(){
-         $.post('/makeappoinment',$('#appform').serialize());
-       
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+        $.post('/makeappoinment',$('#appform').serialize());
 
-         
+
+
     });
+    function showPosition(position) {
+        $("#location").val(position.coords.latitude +
+    "," + position.coords.longitude);
+    }
  </script>
     @endsection
