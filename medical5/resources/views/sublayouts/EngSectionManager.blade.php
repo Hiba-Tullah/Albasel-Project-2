@@ -6,14 +6,14 @@
 <style>
          body,
          html{
-             min-height:100%;     
+             min-height:100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
           body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
-              background-size: cover;            
+              background-size: cover;
         }
 
 * {
@@ -26,9 +26,9 @@
   width: 150px;
   padding: 10px;
   height: 150px;
-  
+
   margin:5px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -61,7 +61,7 @@
          //  float:left;
 
             }
-          
+
           .icon {
             position: fixed;
             right:20px;
@@ -117,7 +117,7 @@
             top: 0px;
           //  display:none;
              }
-    
+
 
         .icon-bar a {
           display: block;
@@ -185,12 +185,12 @@
           cursor: pointer;
             }
 
-        .btn:hover 
+        .btn:hover
            {
      //   background-color: #154360 ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
             table {
@@ -263,17 +263,17 @@ tr:nth-child(even) {
 .dropdownn:hover .dropdownn-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownn:hover .dropbtnn {background-color: #3e8e41;} 
-           
-       
+.dropdownn:hover .dropbtnn {background-color: #3e8e41;}
 
 
-       
-        
+
+
+
+
     </style>
-       
 
-   
+
+
     @yield('styles')
 
 
@@ -293,7 +293,7 @@ tr:nth-child(even) {
 
         <!-- Main Footer Area     class="section-padding-100"-->
         <div class="main-section-area">
-           
+
 
 
 
@@ -303,188 +303,188 @@ tr:nth-child(even) {
                  <div class="column" >
 
                             <div class="widget-title">
-                               
+
                                 <button class="btn" > <b>My Profile </b></button>
                             </div>
-                           
-                 </div>
-                      
 
-                        
+                 </div>
+
+
+
 
                  <div class="column">
-                      
-                       
+
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Order </br> stationery</b></button>
                             </div>
-                            
+
                  </div>
-                        
+
 
 
 
                  <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
                                  <button class="btn"><b>Request</br>maintenance</b></button>
-                            
-                                
-                               
+
+
+
                             </div>
 
            </div>
 
 
-                         
+
 
 
 
                          <div class="column">
-                      
+
                             <div class="widget-title"  >
                                  <button class="btn"> <b>Messages</b></button>
                             </div>
-                            
+
                             </div>
-                  
-                                
-                                     
-                      
-                            
-                               
-                            
-                     
 
 
 
-                            
+
+
+
+
+
+
+
+
+
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Hospital's </br> News</b></button>
                             </div>
-                            
+
                             </div>
 
 
 
-                     
 
 
 
 
-                      
 
-                                  
+
+
+
                         <div class="column">
-                        
+
                             <div class="widget-title" >
                                  <button class="btn"> <b>Eng Storage </br> balance</button>
                             </div>
-                            
+
                             </div>
-                          
-                       
+
+
                                  <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Change </br> Alternate </br> Duties</b></button>
                             </div>
-                            
-                            </div> 
-                          
+
+                            </div>
+
 
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Medical  </br>Library</b></button>
                             </div>
-                            
-                              
+
+
                             </div>
-                             
-                       
+
+
                     </div>
                      <div class="row" style="padding-left: 60px">
 
 
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Related  </br>Websites</b></button>
                             </div>
-                            
-                              
+
+
                             </div>
-                          
-                       
 
 
-                     
-                          
-                      
 
-                    
+
+
+
+
+
+
 
                          <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>  Aman Portal </b></button>
                             </div>
-                            
-                                
+
+
                         </div>
 
 
 
                         <div class="column">
-                      
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Albsel  </br>Portal<b></button>
                             </div>
-                            
+
                             </div>
-                        
+
 
 
 
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>   Health Care </br>Dectionary </b></button>
                             </div>
-                            
-                            
+
+
                              </div>
-                             
 
 
-                 
-                    
+
+
+
                    <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Reports</b></button>
                             </div>
-                            
-                               
-                            </div>
-                             
 
-                              
+
+                            </div>
+
+
+
 
 
 
                            <div class="column">
-                       
+
                             <div class="widget-title">
-                             
+
                               <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal">
                                <b>checking </br> tours </b>
                           </button>
-                            </div> 
+                            </div>
 
 
                             <div id="Modal" class="modal fade">
@@ -495,76 +495,78 @@ tr:nth-child(even) {
            <h5 class="modal-title" id="exampleModalLabel">checking tours</h5>
                                 </div>
 
-                                  
-                                        
-                                         
-                                          
+
+
+
+                                <form action="tours" method="POST">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="recipient-name" class="col-form-label">Section:</label>
                                         <div>
-                                           
-                                            
-                                <select name="section"> 
+
+
+                                <select name="section">
                                     <option value="1">IT</option>
                                     <option value="2">Medical</option>
                                     <option value="2">Mechanical</option>
                                     <option value="2">Buildings</option>
-                                </select> 
-                            
+                                </select>
+
                                         </div>
-                                    
+
                                         <div>
                                         <label for="recipient-name" class="col-form-label">Room Number:</label>
-                                          <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" >
-                                        
+                                          <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" name="room">
+
                                         <label for="recipient-name" class="col-form-label">Device Name:</label>
-                                         
-                                          <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" >
+
+                                          <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" name="name">
                                           <label for="recipient-name" class="col-form-label">Device Serial Number:</label>
-                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" >
-                                 
+                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" name="serial">
+
                                            <label for="recipient-name" class="col-form-label">Date-> dd/mm/yy : HH:MM:SS am/pm</label>
-                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" >
+                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" name="date">
                                         <label for="recipient-name" class="col-form-label">Device status:</label>
-                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" >
+                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" name="status">
                                   <label for="recipient-name" class="col-form-label">Eng Name:</label>
-                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" >
-                                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">
+                                           <input type="text" class="form-control" id="recipient-name" autofocus style="background-color: #7b7f80" name="eng">
+                                            <button type="submit" class="btn btn-secondary">
                                                 Save
                                             </button>
 
                                             <button type="submit" class="btn btn-secondary" data-dismiss="modal">
                                                 Close
                                             </button>
+                                        </form>
                                             </div>
                                         </div>
                                     </div>
                             </div>
-                             </div> </div> 
-                
-                             
+                             </div> </div>
 
- 
-                       
+
+
+
+
 
                          <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href = '/Maintenance';"> <b> Schedule</br> Of</br> Maintenance </b></button>
                             </div>
-                            
+
                             </div>
-                          
-                         
-                             
+
+
+
 
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn"> <b> Future </br> Plans</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                          </div>
 
                           <div class="row" style="padding-left: 60px">
@@ -575,55 +577,55 @@ tr:nth-child(even) {
 
 
                              <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b> Health  </br>Ministry's  </br>New News  </b></button>
                             </div>
-                            
+
                             </div>
-                            
-                            
-                             
+
+
+
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Medical </br>Articles</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Facebook</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Youtube</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
 
                              <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Search</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn"> <b>Logout</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                           </div>
 
 
-                       
+
    </div>
 </div>
 

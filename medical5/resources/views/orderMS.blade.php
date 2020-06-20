@@ -6,17 +6,17 @@
 <style>
          body,
          html{
-             min-height:100%;     
+             min-height:100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
           body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
-              background-size: cover;            
+              background-size: cover;
         }
 
-* { 
+* {
   box-sizing: border-box;
 }
 
@@ -26,9 +26,9 @@
   width: 150px;
   padding: 10px;
   height: 150px;
-  
+
   margin:5px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -61,7 +61,7 @@
          //  float:left;
 
             }
-          
+
           .icon {
             position: fixed;
             right:20px;
@@ -117,7 +117,7 @@
             top: 0px;
           //  display:none;
              }
-    
+
 
         .icon-bar a {
           display: block;
@@ -185,12 +185,12 @@
           cursor: pointer;
             }
 
-        .btn:hover 
+        .btn:hover
            {
      //   background-color: #154360 ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
@@ -248,14 +248,25 @@
 .dropdownn:hover .dropdownn-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownn:hover .dropbtnn {background-color: #3e8e41;} 
-   
-       
-        
-    </style>
-       
+.dropdownn:hover .dropbtnn {background-color: #3e8e41;}
 
-   
+
+
+    </style>
+<div style="margin-left:250px;margin-bottom:500px;margin-top:100px">
+    <form action="/order" method="post">
+        @csrf
+        Type:<br>
+        <select name="type" id="" class="form-control-lg">
+            <option value="1">MS</option>
+            <option value="2">MN</option>
+            <option value="3">SS</option>
+        </select><br><br>
+        <input type="text" class="form-control-lg" placeholder="requester" name="name"><br>
+        <input type="text" class="form-control-lg" placeholder="details" name="details"><br>
+        <input type="submit" value="Add an order" /><br>
+    </form>
+</div>
     @yield('styles')
 
 

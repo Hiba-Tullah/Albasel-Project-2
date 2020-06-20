@@ -6,17 +6,17 @@
 <style>
          body,
          html{
-             min-height:100%;     
+             min-height:100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
           body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
-              background-size: cover;            
+              background-size: cover;
         }
 
-* { 
+* {
   box-sizing: border-box;
 }
 
@@ -26,9 +26,9 @@
   width: 150px;
   padding: 10px;
   height: 150px;
-  
+
   margin:5px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -61,7 +61,7 @@
          //  float:left;
 
             }
-          
+
           .icon {
             position: fixed;
             right:20px;
@@ -117,7 +117,7 @@
             top: 0px;
           //  display:none;
              }
-    
+
 
         .icon-bar a {
           display: block;
@@ -185,12 +185,12 @@
           cursor: pointer;
             }
 
-        .btn:hover 
+        .btn:hover
            {
      //   background-color: #154360 ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
@@ -248,9 +248,9 @@
 .dropdownn:hover .dropdownn-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownn:hover .dropbtnn {background-color: #3e8e41;} 
-   
-       
+.dropdownn:hover .dropbtnn {background-color: #3e8e41;}
+
+
          .btncorona {
            background-color: red  ;
            border: none;
@@ -272,20 +272,20 @@
             }
 
 
-             .btncorona:hover 
+             .btncorona:hover
            {
      //   background-color: red ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
 
     </style>
-       
 
-   
+
+
     @yield('styles')
 
 
@@ -305,7 +305,7 @@
 
         <!-- Main Footer Area     class="section-padding-100"-->
         <div class="main-section-area">
-           
+
 
 
 
@@ -321,79 +321,75 @@
                                     <div class="dropdownn-content" style="left:0;">
                                     <a href="/showProfile">Show</a>
                                     <a  href="/editProfile" >Edit</a>
-                                    
+
                                    </div>
-                               </div> 
+                               </div>
                           </div>
-                           
+
                  </div>
-                      
+
 
 
 
 
                  <div class="column">
-                       
+
                             <div class="widget-title">
                               <button class="btn" onclick="window.location.href = '/SOO';" > <b> Schedule of</br> operations</b></button>
-                            </div> 
+                            </div>
                 </div>
-                             
-                        
+
+
 
 
                 <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href = '/SOQ';"> <b>Schedule of </br> cardiac</br> catheter</b> </button>
                             </div>
-                            
+
                 </div>
-                      
 
 
 
-               
+
+
 
                <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
-                                  <button class="dropbtnn"><b>Order</b></button>
-                                  <div class="dropdownn-content" style="left:0;">
-                                    <a href="/orderMS">Medical Staff</a>
-                                    <a href="/orderSS">stationery</a>
-                                    <a href="/orderMnS">maintenance</a>
-                                  </div>
-                                </div> 
-                            </div> 
+                                  <a href="/order"><button class="btn btn-primary"><b>Order</b></button></a>
 
-                            
+                                </div>
+                            </div>
+
+
                 </div>
 
 
                         <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
                                   <button class="dropbtnn"><b>Add</b></button>
                                   <div class="dropdownn-content" style="left:0;">
                                     <a href="/medicalBlog2">Medical Article</a>
-                                    
-                                    
-                                  </div>
-                                </div> 
-                            </div> 
 
-                            
+
+                                  </div>
+                                </div>
+                            </div>
+
+
                 </div>
                            <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
@@ -402,27 +398,22 @@
                                     <a href="/specialized">Specialist Doctors</a>
                                     <a href="/resident">Resident Doctors</a>
                                     <a href="/nursing">Nursery</a>
-                                  
+
                                   </div>
-                                </div> 
-                            </div> 
+                                </div>
+                            </div>
                           </div>
-                                      
+
 
                          <div class="column">
-                      
-                        
+
+
                           <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
-                                  <button class="dropbtnn"><b>Messages</b></button>
-                                    <div class="dropdownn-content" style="left:0;">
-                                    <a href="#">Show Messages</a>
-                <a  data-toggle="modal" data-target="#exampleModal" >Send Message</a>
-                                    
-                                   </div>
-                               </div> 
-                          </div> 
+                                  <a href="http://albasel.epizy.com" target="blank"><button class="dropbtnn"><b>Messages</b></button></a>
+                               </div>
+                          </div>
                               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                   <div class="modal-content">
@@ -452,31 +443,31 @@
                                 </div>
                               </div>
 
-                            
-                </div> 
-                  
-                                
-                                     
+
+                </div>
+
+
+
                         <div class="column">
-                        
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href = '/roomD';"> <b>Room </br> Diagram </b></button>
                             </div>
-                            
+
                             </div>
-                        
-                            
+
+
                 </div>
-                      
-                        
+
+
            <div class="row" style="padding-left: 60px">
 
-                 
-                    
+
+
 
                             <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
@@ -484,50 +475,46 @@
                                   <div class="dropdownn-content" style="left:0;">
                                     <a href="/BB">Blood Bank Balance</a>
                                     <a href="/BD">Blood's Donation</a>
-                                    
-                                  </div>
-                                </div> 
-                            </div> 
 
-                            
+                                  </div>
+                                </div>
+                            </div>
+
+
                 </div>
-                    
-                     
+
+
 
 
 
                              <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href ='/hospitalNews';"> <b>Hospital's </br> News</b></button>
                             </div>
-                            
+
                             </div>
                          <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
-                                  <button class="dropbtnn"><b>Medical Blog</b></button>
-                                  <div class="dropdownn-content" style="left:0;">
-                                    <a href="/medicalBlog">Medical Articles</a>
-                                    <a href="/medicalLibrary">Medical Library</a>
-                                    <a href="/medicalDictionary">Health Care Dictionary</a>
-                                  </div>
-                                </div> 
-                            </div> 
+                                <a href="http://albasel.epizy.com" target="blank"><button class="dropbtnn"><b>Medical Blog</b></button></a>
 
-                            
+                                </div>
+                            </div>
+
+
                 </div>
-                             
-                       
+
+
 
 
 
                          <div class="column">
-                      
-                        
+
+
                             <div class="widget-title">
 
                               <div class="dropdownn" style="float:left;">
@@ -539,16 +526,16 @@
                                     <a href="#">Directorate of Health</a>
                                     <a href="#">Human Resources Watch</a>
                                   </div>
-                             </div> 
-                            </div> 
+                             </div>
+                            </div>
                           </div>
 
-                            
-                       
-                          
-                       
-                          
-                       
+
+
+
+
+
+
 
 
                            <div class="column">
@@ -584,7 +571,7 @@
                                             <input type="text" class="form-control input-lg" name="email" value="">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <div>
                                             <button type="submit" class="btn btn-success">
@@ -600,37 +587,37 @@
                                         </div>
                                     </div>
                                 </form>
-                            
-                            </div> 
+
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                                      
+
                                <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href = 'http://www.moh.gov.sy/Default.aspx?tabid=56&language=ar-YE';"> <b> Health  </br>Ministry's  </br>New News  </b></button>
                             </div>
-                            
+
                             </div>
-                             
-                            
+
+
                               <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href = 'https://www.facebook.com/%D8%A7%D9%84%D9%87%D9%8A%D8%A6%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D9%84-%D9%84%D8%A3%D9%85%D8%B1%D8%A7%D8%B6-%D9%88%D8%AC%D8%B1%D8%A7%D8%AD%D8%A9-%D8%A7%D9%84%D9%82%D9%84%D8%A8-%D9%81%D9%8A-%D8%A7%D9%84%D9%84%D8%A7%D8%B0%D9%82%D9%8A%D8%A9-BHL-951296891552192/?ref=page_internal';"> <b>Facebook</b></button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                            <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn" onclick="window.location.href = 'http://www.youtube.com';" > <b>Youtube</b>
                                  </button>
                             </div>
-                            
-                            </div> 
+
+                            </div>
                        </div>
 
 
@@ -638,10 +625,10 @@
 
                        <div class="row" style="padding-left: 60px">
 
-                             
-                           
 
-                       
+
+
+
                              <div class="column">
 
                               <div class="widget-title">
@@ -666,22 +653,22 @@
                                     <div class="form-group">
                                         <label class="control-label">Type Of Progress:</label>
                                          <div class="form-group">
-                                             <select name="blood"  > 
+                                             <select name="blood"  >
                                     <option value="1">Sergury</option>
                                     <option value="2">qathter</option>
-                                    <option value="8">Puncture</option> 
+                                    <option value="8">Puncture</option>
                                     <option value="3">Echo</option>
                                     <option value="4">Heart <br>Effort test</option>
                                     <option value="5">Pulse <br>Holter</option>
                                     <option value="6">Pressure<br> Holter</option>
                                     <option value="7">Weaning<br> patient</option>
-                                    <option value="8">Draw<br><br> blood</option> 
-                                    <option value="7">Breath <br>test</option> 
-                                </select>  
+                                    <option value="8">Draw<br><br> blood</option>
+                                    <option value="7">Breath <br>test</option>
+                                </select>
                                         </div>
                                     </div>
 
-                                  
+
                                     <div class="form-group">
                                         <label class="control-label">Patient ID:</label>
                                         <div>
@@ -710,19 +697,19 @@
                                         </div>
                                     </div>
                                 </form>
-                            
-                            </div> 
+
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                            
 
 
-                  
-                    
-                   
-                               
+
+
+
+
+
                               <div class="column">
 
                               <div class="widget-title">
@@ -756,19 +743,19 @@
                                             <input type="text" class="form-control input-lg" name="email" value="">
                                         </div>
                                         <div class="form-group">
-                                             <select name="blood"  > 
+                                             <select name="blood"  >
                                     <option value="1">Sergury</option>
                                     <option value="2">qathter</option>
-                                    <option value="8">Puncture</option> 
+                                    <option value="8">Puncture</option>
                                     <option value="3">Echo</option>
                                     <option value="4">Heart <br>Effort test</option>
                                     <option value="5">Pulse <br>Holter</option>
                                     <option value="6">Pressure<br> Holter</option>
                                     <option value="7">Weaning<br> patient</option>
-                                    <option value="8">Draw<br><br> blood</option> 
-                                    <option value="7">Breath <br>test</option> 
-                                </select>  
-                                        </div> 
+                                    <option value="8">Draw<br><br> blood</option>
+                                    <option value="7">Breath <br>test</option>
+                                </select>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <div>
@@ -785,13 +772,13 @@
                                         </div>
                                     </div>
                                 </form>
-                            
-                            </div> 
+
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                           
+
                           <div class="column">
 
                               <div class="widget-title">
@@ -813,7 +800,7 @@
                                             <input type="text" class="form-control input-lg" name="email" value="">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <div>
                                             <button type="submit" class="btn btn-success">
@@ -829,41 +816,41 @@
                                         </div>
                                     </div>
                                 </form>
-                            
-                            </div> 
+
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                          <div class="column">
-                       
+
                             <div class="widget-title">
                                 <button class="btncorona" onclick="window.location.href = '/pp';"> <b>Corona <br> Status </b></button>
                             </div>
-                            
+
                             </div>
                             <div class="column">
-                       
+
                             <div class="widget-title">
                                  <button class="btn" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                    <b>     {{ __('Logout') }} </b>
-                                 
+
 
                                  </button>
-                          
+
 
                               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                          
+
                             </div>
-                            
-                            </div> 
+
+                            </div>
                           </div>
 
 
-                       
+
    </div>
 </div>
 

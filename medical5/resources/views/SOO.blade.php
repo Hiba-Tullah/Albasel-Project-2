@@ -1,22 +1,54 @@
 
 @extends('layout.master3')
 @section('content')
-
-
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Date</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($data as $item)
+            <tr>
+                <td>{{$item->id}}</td>
+                <td>{{$item->p_name}}</td>
+                <td>{{$item->details}}</td>
+                <td>{{$item->date}}</td>
+                <td>
+                    <form action="/operation/{{$item->id}}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 <style>
          body,
          html{
-             min-height:100%;     
+             min-height:100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
           body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
-              background-size: cover;            
+              background-size: cover;
         }
 
-* { 
+* {
   box-sizing: border-box;
 }
 
@@ -26,9 +58,9 @@
   width: 150px;
   padding: 10px;
   height: 150px;
-  
+
   margin:5px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -61,7 +93,7 @@
          //  float:left;
 
             }
-          
+
           .icon {
             position: fixed;
             right:20px;
@@ -117,7 +149,7 @@
             top: 0px;
           //  display:none;
              }
-    
+
 
         .icon-bar a {
           display: block;
@@ -185,12 +217,12 @@
           cursor: pointer;
             }
 
-        .btn:hover 
+        .btn:hover
            {
      //   background-color: #154360 ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
@@ -248,14 +280,14 @@
 .dropdownn:hover .dropdownn-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownn:hover .dropbtnn {background-color: #3e8e41;} 
-   
-       
-        
-    </style>
-       
+.dropdownn:hover .dropbtnn {background-color: #3e8e41;}
 
-   
+
+
+    </style>
+
+
+
     @yield('styles')
 
 

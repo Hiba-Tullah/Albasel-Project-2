@@ -108,9 +108,7 @@ Route::get('/NearestPharmacy', function () {
 Route::get('/OurTeam', function () {
     return view('OurTeam');
 });
-Route::get('/Maintenance', function () {
-    return view('Maintenance');
-});
+Route::get('/Maintenance', 'ToursController@index');
 
 Route::get('/pp', function () {
     return view('patientProgress');
@@ -214,14 +212,13 @@ Route::get('/editProfile', function () {
     return view('editProfile');
 });
 
-Route::get('/SOO', function () {
-    return view('SOO');
-});
-
+Route::get('/SOO', 'OperationController@index');
+Route::resource('operation', 'OperationController');
 Route::get('/SOQ', function () {
     return view('SOQ');
 });
 
+Route::resource('order', 'OrdersController');
 
 
 
@@ -248,11 +245,11 @@ Route::get('/smoking', function () {
 
 Route::get('/corona', function () {
     return view('corona');
-});  
-
+});
 
 Route::get('/ventilation', function () {
     return view('ventilation');
-}); 
+});
 Route::post('/changestatus','BedsController@changeStatus');
 Route::post('/makeappoinment','AppoinmentController@make');
+Route::resource('/tours','ToursController');

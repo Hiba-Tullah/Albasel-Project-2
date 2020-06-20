@@ -5,14 +5,14 @@
 <style>
          body,
          html{
-             min-height:100%;     
+             min-height:100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
           body {
              background-image: url("run44.jpg");
              background-repeat: no-repeat;
-              background-size: cover;            
+              background-size: cover;
         }
 
 * {
@@ -25,9 +25,9 @@
   width: 150px;
   padding: 10px;
   height: 150px;
-  
+
   margin:5px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -60,7 +60,7 @@
          //  float:left;
 
             }
-          
+
           .icon {
             position: fixed;
             right:20px;
@@ -116,7 +116,7 @@
             top: 0px;
           //  display:none;
              }
-    
+
 
         .icon-bar a {
           display: block;
@@ -184,12 +184,12 @@
           cursor: pointer;
             }
 
-        .btn:hover 
+        .btn:hover
            {
      //   background-color: #154360 ;
      background-color: #4CAF50;
 
-     
+
           color: white;
             }
 
@@ -250,8 +250,8 @@
 .dropdownn:hover .dropdownn-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdownn:hover .dropbtnn {background-color: #3e8e41;} 
-           
+.dropdownn:hover .dropbtnn {background-color: #3e8e41;}
+
             table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -269,11 +269,11 @@ tr:nth-child(even) {
 }
 
 
-        
-    </style>
-       
 
-   
+    </style>
+
+
+
     @yield('styles')
 
 <div style="padding-top: 50px">
@@ -287,121 +287,31 @@ tr:nth-child(even) {
 
         <!-- Main Footer Area     class="section-padding-100"-->
         <div class="main-section-area">
-           
+
 <div>
                                     <table >
                                       <tr>
                                         <th>Section</th>
                                         <th>Room Number</th>
                                         <th>Device Name</th>
-                                         <th>Serial Number</th>
-                                          <th>Date</th>
-                                          <th>Status</th>
-                                          <th>Notes</th>
+                                        <th>Serial Number</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Engineer</th>
                                       </tr>
-                                      
-                                      <tr>
-                                        <td>IT</td>
-                                        <td>102</td>
-                                        <td>PRINTER</td>
-                                        <td>E2R5E2221D00</td>
-                                        <td>24/8/2019</td>
-                                        <td>WORK</td>
-                                        <td>-</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>102</td>
-                                        <td>HP PC</td>
-                                        <td>EXX0020EDF</td>
-                                        <td>6/9/2019</td>                                        
-                                        <td>WORK</td>
-                                        <td>-</td>
-                                      </tr>
-                                     <tr>
-                                        <td>IT</td>
-                                        <td>107</td>
-                                        <td>DILL PC</td>
-                                        <td>OIX650EDF</td>
-                                        <td>8/7/2019</td>                                        
-                                        <td>WORK</td>
-                                        <td>-</td>
-                                      </tr>
-                                      <tr>
-                                        <td>IT</td>
-                                        <td>204</td>
-                                        <td>HP PC</td>
-                                        <td>E000OI898</td>
-                                        <td>6/6/2019</td>
-                                        <td>Under maintenance</td>
-                                        <td>New Hard 500G</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>105</td>
-                                        <td>Microsoft Word Program</td>
-                                        <td>-</td>
-                                        <td>12/10/2019</td>
-                                        <td>Under maintenance</td>
-                                        <td>Activate</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>305</td>
-                                        <td>DILL PC</td>
-                                        <td>D23FGFG4GF</td>
-                                        <td>4/12/2019</td>
-                                        <td>Under maintenance</td>
-                                        <td>New RAM 4G</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>200</td>
-                                        <td>Bexlon Printer</td>
-                                        
-                                        <td>20256892</td>
-                                        <td>3/12/2019</td>
-                                        <td>Work</td>
-                                        <td>Low Toner</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>109</td>
-                                        <td>PC</td>
-                                        <td>5214455</td>
-                                        <td>5/11/2019</td>
-                                        <td>Under maintenance</td>
-                                        <td>New Board</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>99</td>
-                                        <td>DILL PC</td>
-                                        <td>X89JJ788</td>
-                                        <td>24/8/2019</td>
-                                        <td>WORK</td>
-                                        <td>-</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>205</td>
-                                        <td>Camera</td>
-                                        <td>244h5h55</td>
-                                        <td>11/11/2019</td>
-                                        <td>WORK</td>
-                                        <td>-</td>
-                                      </tr>
-                                       <tr>
-                                        <td>IT</td>
-                                        <td>201</td>
-                                        <td>Brother Printer</td>
-                                        <td>E0000d67</td>
-                                        <td>21/10/2019</td>
-                                        <td>Under maintenance</td>
-                                        <td>New Drum</td>
-                                      </tr>
+                                      @foreach($data as $item)
+                                        <tr>
+                                            <td>{{$item->section}}</td>
+                                            <td>{{$item->room}}</td>
+                                            <td>{{$item->name}}</td>
+                                            <td>{{$item->serial}}</td>
+                                            <td>{{$item->date}}</td>
+                                            <td>{{$item->status}}</td>
+                                            <td>{{$item->eng}}</td>
+                                        </tr>
+                                      @endforeach
                                     </table>
-                                            
+
                                         </div>
 
            </div>
